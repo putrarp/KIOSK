@@ -3,7 +3,7 @@
     Dim lamaBekerja, jatahCuti, cutiTerpakai, cutiPending, saldoAkhir As Decimal
     Dim tanggalJoin As DateTime
 
-    Public Sub setEmp(kpk, name, dept, sect, join)
+    Public Sub setEmp(kpk, name, dept, sect, join, terpakai)
         emKpk = kpk
         emName = name
         emDept = dept
@@ -11,7 +11,7 @@
         tanggalJoin = setTanggalJoin(join)
         lamaBekerja = setLamaBekerja(tanggalJoin)
         jatahCuti = setJatahCuti(lamaBekerja, tanggalJoin)
-        cutiTerpakai = 5
+        cutiTerpakai = terpakai
         cutiPending = 1
         saldoAkhir = hitungSaldo(jatahCuti, cutiTerpakai, cutiPending)
     End Sub

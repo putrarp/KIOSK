@@ -63,7 +63,6 @@ Partial Class Login
         Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmployeeDataSet = New KIOSK.EmployeeDataSet()
         Me.ActionCodeTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.actionCodeTableAdapter()
-        Me.Copy_Of_personelActionTableAdapter1 = New KIOSK.Personel_ActionDataSetTableAdapters.Copy_Of_personelActionTableAdapter()
         Me.cutikuPanel = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -82,6 +81,7 @@ Partial Class Login
         Me.btnRequest = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PersonelActionTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.personelActionTableAdapter()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -556,10 +556,6 @@ Partial Class Login
         '
         Me.ActionCodeTableAdapter.ClearBeforeFill = True
         '
-        'Copy_Of_personelActionTableAdapter1
-        '
-        Me.Copy_Of_personelActionTableAdapter1.ClearBeforeFill = True
-        '
         'cutikuPanel
         '
         Me.cutikuPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(49, Byte), Integer))
@@ -804,6 +800,10 @@ Partial Class Login
         Me.PictureBox7.TabIndex = 3
         Me.PictureBox7.TabStop = False
         '
+        'PersonelActionTableAdapter
+        '
+        Me.PersonelActionTableAdapter.ClearBeforeFill = True
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -890,7 +890,6 @@ Partial Class Login
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents Copy_Of_personelActionTableAdapter1 As Personel_ActionDataSetTableAdapters.Copy_Of_personelActionTableAdapter
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Label8 As Label
@@ -912,4 +911,5 @@ Partial Class Login
     Friend WithEvents lbSaldoAkhir As Label
     Friend WithEvents btnRiwayat As FlowLayoutPanel
     Friend WithEvents btnRequest As FlowLayoutPanel
+    Friend WithEvents PersonelActionTableAdapter As Personel_ActionDataSetTableAdapters.personelActionTableAdapter
 End Class

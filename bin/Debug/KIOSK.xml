@@ -137,22 +137,12 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:KIOSK.Personel_ActionDataSet.personelActionDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:KIOSK.Personel_ActionDataSet.FindApprovalDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:KIOSK.Personel_ActionDataSet.Copy_Of_personelActionDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:KIOSK.Personel_ActionDataSet.actionCodeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.personelActionDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -162,22 +152,12 @@ Represents the strongly named DataTable class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:KIOSK.Personel_ActionDataSet.personelActionRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:KIOSK.Personel_ActionDataSet.FindApprovalRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:KIOSK.Personel_ActionDataSet.Copy_Of_personelActionRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
 <member name="T:KIOSK.Personel_ActionDataSet.actionCodeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.personelActionRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -187,22 +167,12 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
-<member name="T:KIOSK.Personel_ActionDataSet.personelActionRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:KIOSK.Personel_ActionDataSet.FindApprovalRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:KIOSK.Personel_ActionDataSet.Copy_Of_personelActionRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:KIOSK.Personel_ActionDataSet.actionCodeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.personelActionRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -212,22 +182,12 @@ Row event argument class
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.personelActionTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.FindApprovalTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.Copy_Of_personelActionTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
 <member name="T:KIOSK.Personel_ActionDataSetTableAdapters.actionCodeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.personelActionTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

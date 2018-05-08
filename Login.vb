@@ -10,12 +10,13 @@
             count = EmployeeTableAdapter.checkKPK(KPK)
             If count = 1 Then
                 EmployeeBindingSource.Filter = "ID = " & KPK
-                Dim a = EmployeeBindingSource.Current("EMNAME")
+
                 Employee.setEmp(Trim(KPK),
                                 Trim(EmployeeBindingSource.Current("EMNAME")),
                                 Trim(EmployeeBindingSource.Current("EMDEPT")),
                                 Trim(EmployeeBindingSource.Current("EMLOC#")),
-                                Trim(EmployeeBindingSource.Current("EMCOMM")))
+                                Trim(EmployeeBindingSource.Current("EMCOMM")),
+                                PersonelActionTableAdapter.SumTotalCuti(KPK))
                 loginPanel.Visible = False
                 menuPanel.Visible = True
                 requestCutiPanel.Visible = False
@@ -70,7 +71,7 @@
                      dtMulai.Value, dtAkhir.Value)
             ProgressBar1.Value = 60
             Try
-                Copy_Of_personelActionTableAdapter1.inputCuti(Cuti.getTanggalInput,
+                PersonelActionTableAdapter.InputCuti(Cuti.getTanggalInput,
                                                       Cuti.getTipeCuti,
                                                       Employee.getKpk,
                                                       Employee.getName,

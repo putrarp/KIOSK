@@ -762,6 +762,8 @@ Partial Class Login
         'btnRiwayat
         '
         Me.btnRiwayat.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnRiwayat.BackgroundImage = CType(resources.GetObject("btnRiwayat.BackgroundImage"), System.Drawing.Image)
+        Me.btnRiwayat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnRiwayat.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnRiwayat.Location = New System.Drawing.Point(3, 276)
         Me.btnRiwayat.Name = "btnRiwayat"
@@ -771,6 +773,8 @@ Partial Class Login
         'btnRequest
         '
         Me.btnRequest.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.btnRequest.BackgroundImage = CType(resources.GetObject("btnRequest.BackgroundImage"), System.Drawing.Image)
+        Me.btnRequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnRequest.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnRequest.Location = New System.Drawing.Point(3, 353)
         Me.btnRequest.Name = "btnRequest"

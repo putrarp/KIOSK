@@ -1,0 +1,276 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+KIOSK
+</name>
+</assembly>
+<members>
+<member name="T:KIOSK.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:KIOSK.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:KIOSK.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.deptDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.EmployeeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.staffListDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.deptRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.EmployeeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.staffListRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.deptRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.EmployeeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSet.staffListRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSetTableAdapters.deptTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSetTableAdapters.EmployeeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSetTableAdapters.staffListTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:KIOSK.EmployeeDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(KIOSK.EmployeeDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:KIOSK.EmployeeDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(KIOSK.EmployeeDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:KIOSK.EmployeeDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(KIOSK.EmployeeDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:KIOSK.EmployeeDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:KIOSK.EmployeeDataSetTableAdapters.TableAdapterManager.UpdateAll(KIOSK.EmployeeDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:KIOSK.EmployeeDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.approvalDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.personelActionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.FindApprovalDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.Copy_Of_personelActionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.actionCodeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.approvalRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.personelActionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.FindApprovalRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.Copy_Of_personelActionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.actionCodeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.approvalRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.personelActionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.FindApprovalRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.Copy_Of_personelActionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSet.actionCodeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.approvalTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.personelActionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.FindApprovalTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.Copy_Of_personelActionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.actionCodeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:KIOSK.Personel_ActionDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(KIOSK.Personel_ActionDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:KIOSK.Personel_ActionDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(KIOSK.Personel_ActionDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:KIOSK.Personel_ActionDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(KIOSK.Personel_ActionDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:KIOSK.Personel_ActionDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:KIOSK.Personel_ActionDataSetTableAdapters.TableAdapterManager.UpdateAll(KIOSK.Personel_ActionDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:KIOSK.Personel_ActionDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

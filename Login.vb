@@ -16,7 +16,8 @@
                                 Trim(EmployeeBindingSource.Current("EMDEPT")),
                                 Trim(EmployeeBindingSource.Current("EMLOC#")),
                                 Trim(EmployeeBindingSource.Current("EMCOMM")),
-                                PersonelActionTableAdapter.SumTotalCuti(KPK))
+                                PersonelActionTableAdapter.ApprovedCuti(KPK),
+                                PersonelActionTableAdapter.PendingCuti(KPK))
                 loginPanel.Visible = False
                 menuPanel.Visible = True
                 requestCutiPanel.Visible = False
@@ -48,7 +49,6 @@
         menuPanel.Visible = False
         requestCutiPanel.Visible = False
         cutikuPanel.Visible = True
-
         lbSaldoAwal.Text = Employee.getJatahCuti
         lbTerpakai.Text = Employee.getCutiTerpakai
         lbPending.Text = Employee.getCutiPending
@@ -70,8 +70,9 @@
                      tbNomorDarurat.Text.ToString,
                      dtMulai.Value, dtAkhir.Value)
             ProgressBar1.Value = 60
-            Try
-                PersonelActionTableAdapter.InputCuti(Cuti.getTanggalInput,
+            If Employee.getSaldoAkhir - Cuti.getTotalHari >= 0 Then
+                Try
+                    PersonelActionTableAdapter.InputCuti(Cuti.getTanggalInput,
                                                       Cuti.getTipeCuti,
                                                       Employee.getKpk,
                                                       Employee.getName,
@@ -81,21 +82,24 @@
                                                       Cuti.getTglAkhir,
                                                       Cuti.getTotalHari,
                                                       Cuti.getNomorDarurat)
-                ProgressBar1.Value = 90
-            Catch
-                MsgBox("Request cuti telah gagal silahkan cek data dan coba kembali")
+                    ProgressBar1.Value = 90
+                Catch
+                    MsgBox("Request cuti telah gagal silahkan cek data dan coba kembali")
+                    ProgressBar1.Value = 0
+                    Exit Sub
+                End Try
+                ProgressBar1.Value = 100
+                MsgBox("Request cuti telah di input")
+                loginPanel.Visible = True
+                menuPanel.Visible = False
+                requestCutiPanel.Visible = False
+                cutikuPanel.Visible = False
                 ProgressBar1.Value = 0
-                Exit Sub
-            End Try
-            ProgressBar1.Value = 100
-            MsgBox("Request cuti telah di input")
-            loginPanel.Visible = True
-            menuPanel.Visible = False
-            requestCutiPanel.Visible = False
-            cutikuPanel.Visible = False
-            ProgressBar1.Value = 0
-            tbKPK.Clear()
-            tbKPK.Select()
+                tbKPK.Clear()
+                tbKPK.Select()
+            Else
+                MsgBox("Sisa saldo cuti anda hanya " & Employee.getSaldoAkhir & " Hari")
+            End If
         End If
     End Sub
 
@@ -114,6 +118,13 @@
         cutikuPanel.Visible = True
     End Sub
 
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        loginPanel.Visible = False
+        menuPanel.Visible = True
+        requestCutiPanel.Visible = False
+        cutikuPanel.Visible = False
+    End Sub
+
     Private Sub btnRiwayat_Click(sender As Object, e As EventArgs) Handles btnRiwayat.Click
 
     End Sub
@@ -124,4 +135,6 @@
         requestCutiPanel.Visible = True
         cutikuPanel.Visible = False
     End Sub
+
+
 End Class

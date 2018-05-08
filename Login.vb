@@ -22,12 +22,15 @@
                 menuPanel.Visible = True
                 requestCutiPanel.Visible = False
                 cutikuPanel.Visible = False
+                riwayatCuti.Visible = False
                 Label2.Text = "Selamat Datang, " & Employee.getName
             End If
         End If
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Personel_ActionDataSet.approval' table. You can move, or remove it, as needed.
+        Me.ApprovalTableAdapter.Fill(Me.Personel_ActionDataSet.approval)
         'TODO: This line of code loads data into the 'Personel_ActionDataSet.actionCode' table. You can move, or remove it, as needed.
         Me.ActionCodeTableAdapter.Fill(Me.Personel_ActionDataSet.actionCode)
         'TODO: This line of code loads data into the 'EmployeeDataSet.Employee' table. You can move, or remove it, as needed.
@@ -42,6 +45,7 @@
         menuPanel.Visible = False
         requestCutiPanel.Visible = False
         cutikuPanel.Visible = False
+        riwayatCuti.Visible = False
     End Sub
 
     Private Sub btnCutiku_Click(sender As Object, e As EventArgs) Handles btnCutiku.Click
@@ -49,6 +53,7 @@
         menuPanel.Visible = False
         requestCutiPanel.Visible = False
         cutikuPanel.Visible = True
+        riwayatCuti.Visible = False
         lbSaldoAwal.Text = Employee.getJatahCuti
         lbTerpakai.Text = Employee.getCutiTerpakai
         lbPending.Text = Employee.getCutiPending
@@ -68,7 +73,7 @@
             ProgressBar1.Value = 30
             Cuti.setCuti(cbTipeCuti.SelectedValue.ToString,
                      tbNomorDarurat.Text.ToString,
-                     dtMulai.Value, dtAkhir.Value)
+                     dtMulai.Value.Date, dtAkhir.Value.Date)
             ProgressBar1.Value = 60
             If Employee.getSaldoAkhir - Cuti.getTotalHari >= 0 Then
                 Try
@@ -94,6 +99,7 @@
                 menuPanel.Visible = False
                 requestCutiPanel.Visible = False
                 cutikuPanel.Visible = False
+                riwayatCuti.Visible = False
                 ProgressBar1.Value = 0
                 tbKPK.Clear()
                 tbKPK.Select()
@@ -108,6 +114,7 @@
         menuPanel.Visible = False
         requestCutiPanel.Visible = False
         cutikuPanel.Visible = False
+        riwayatCuti.Visible = False
         tbKPK.Clear()
     End Sub
 
@@ -116,6 +123,15 @@
         menuPanel.Visible = False
         requestCutiPanel.Visible = False
         cutikuPanel.Visible = True
+        riwayatCuti.Visible = False
+    End Sub
+
+    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
+        loginPanel.Visible = False
+        menuPanel.Visible = False
+        requestCutiPanel.Visible = False
+        cutikuPanel.Visible = True
+        riwayatCuti.Visible = False
     End Sub
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
@@ -123,10 +139,17 @@
         menuPanel.Visible = True
         requestCutiPanel.Visible = False
         cutikuPanel.Visible = False
+        riwayatCuti.Visible = False
     End Sub
 
     Private Sub btnRiwayat_Click(sender As Object, e As EventArgs) Handles btnRiwayat.Click
+        loginPanel.Visible = False
+        menuPanel.Visible = False
+        requestCutiPanel.Visible = False
+        cutikuPanel.Visible = False
+        riwayatCuti.Visible = True
 
+        Me.PersonelActionTableAdapter.FillBy(Me.Personel_ActionDataSet.personelAction, Employee.getKpk)
     End Sub
 
     Private Sub btnRequest_Click(sender As Object, e As EventArgs) Handles btnRequest.Click

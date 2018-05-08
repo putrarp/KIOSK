@@ -4,7 +4,7 @@
     Dim totalHari As Integer
 
     Public Sub setCuti(tipe, nomor, mulai, akhir)
-        tanggalInput = Today()
+        tanggalInput = Now()
         tipeCuti = tipe
         nomorDarurat = nomor
         tglMulai = mulai

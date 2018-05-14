@@ -6,6 +6,8 @@
         Cuti = cut
     End Sub
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         ProgressBar1.Maximum = 100
         ProgressBar1.Minimum = 0
         ProgressBar1.Value = 0

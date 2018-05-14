@@ -111,7 +111,6 @@
                 ProgressBar1.Value = 0
                 tbKPK.Clear()
                 tbKPK.Select()
-
             Else
                 MsgBox("Sisa saldo cuti anda hanya " & Employee.getSaldoAkhir & " Hari")
                 loginPanel.Visible = True
@@ -173,6 +172,4 @@
         requestCutiPanel.Visible = True
         cutikuPanel.Visible = False
     End Sub
-
-
 End Class

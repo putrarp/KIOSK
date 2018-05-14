@@ -17,3 +17,4 @@ C:\Users\pradanap\source\repos\KIOSK\KIOSK\obj\Debug\KIOSK.exe
 C:\Users\pradanap\source\repos\KIOSK\KIOSK\obj\Debug\KIOSK.xml
 C:\Users\pradanap\source\repos\KIOSK\KIOSK\obj\Debug\KIOSK.pdb
 C:\Users\pradanap\source\repos\KIOSK\KIOSK\obj\Debug\KIOSK.vbprojResolveAssemblyReference.cache
+C:\Users\pradanap\source\repos\KIOSK\KIOSK\obj\Debug\KIOSK.Print.resources

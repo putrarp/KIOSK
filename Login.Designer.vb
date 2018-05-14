@@ -65,7 +65,6 @@ Partial Class Login
         Me.EmployeeTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.EmployeeTableAdapter()
         Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmployeeDataSet = New KIOSK.EmployeeDataSet()
-        Me.ActionCodeTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.actionCodeTableAdapter()
         Me.cutikuPanel = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -84,7 +83,6 @@ Partial Class Login
         Me.btnRequest = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PersonelActionTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.personelActionTableAdapter()
         Me.riwayatCuti = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
@@ -102,7 +100,13 @@ Partial Class Login
         Me.Label25 = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.ApprovalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ActionCodeTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.actionCodeTableAdapter()
+        Me.PersonelActionTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.personelActionTableAdapter()
         Me.ApprovalTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.approvalTableAdapter()
+        Me.SectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DeptTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.deptTableAdapter()
+        Me.TipeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ActionCodeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,6 +139,9 @@ Partial Class Login
         CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApprovalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TipeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ActionCodeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -581,10 +588,6 @@ Partial Class Login
         Me.EmployeeDataSet.DataSetName = "EmployeeDataSet"
         Me.EmployeeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ActionCodeTableAdapter
-        '
-        Me.ActionCodeTableAdapter.ClearBeforeFill = True
-        '
         'cutikuPanel
         '
         Me.cutikuPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(49, Byte), Integer))
@@ -829,10 +832,6 @@ Partial Class Login
         Me.PictureBox7.TabIndex = 3
         Me.PictureBox7.TabStop = False
         '
-        'PersonelActionTableAdapter
-        '
-        Me.PersonelActionTableAdapter.ClearBeforeFill = True
-        '
         'riwayatCuti
         '
         Me.riwayatCuti.BackColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(221, Byte), Integer))
@@ -1032,9 +1031,36 @@ Partial Class Login
         Me.ApprovalBindingSource.DataMember = "approval"
         Me.ApprovalBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
         '
+        'ActionCodeTableAdapter
+        '
+        Me.ActionCodeTableAdapter.ClearBeforeFill = True
+        '
+        'PersonelActionTableAdapter
+        '
+        Me.PersonelActionTableAdapter.ClearBeforeFill = True
+        '
         'ApprovalTableAdapter
         '
         Me.ApprovalTableAdapter.ClearBeforeFill = True
+        '
+        'SectionBindingSource
+        '
+        Me.SectionBindingSource.DataMember = "dept"
+        Me.SectionBindingSource.DataSource = Me.EmployeeDataSet
+        '
+        'DeptTableAdapter
+        '
+        Me.DeptTableAdapter.ClearBeforeFill = True
+        '
+        'TipeBindingSource
+        '
+        Me.TipeBindingSource.DataMember = "actionCode"
+        Me.TipeBindingSource.DataSource = Me.Personel_ActionDataSet
+        '
+        'ActionCodeBindingSource1
+        '
+        Me.ActionCodeBindingSource1.DataMember = "actionCode"
+        Me.ActionCodeBindingSource1.DataSource = Me.PersonelActionDataSetBindingSource
         '
         'Login
         '
@@ -1093,6 +1119,9 @@ Partial Class Login
         CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApprovalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SectionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TipeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ActionCodeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1173,4 +1202,8 @@ Partial Class Login
     Friend WithEvents TotDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmergencyNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SectionBindingSource As BindingSource
+    Friend WithEvents DeptTableAdapter As EmployeeDataSetTableAdapters.deptTableAdapter
+    Friend WithEvents TipeBindingSource As BindingSource
+    Friend WithEvents ActionCodeBindingSource1 As BindingSource
 End Class

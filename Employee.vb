@@ -1,13 +1,14 @@
 ﻿Public Class Employee
-    Dim emKpk, emName, emDept, emSect As String
+    Dim emKpk, emName, emDept, emSect, section As String
     Dim lamaBekerja, jatahCuti, cutiTerpakai, cutiPending, saldoAkhir As Decimal
     Dim tanggalJoin As DateTime
 
-    Public Sub setEmp(kpk, name, dept, sect, join, terpakai, pending)
+    Public Sub setEmp(kpk, name, dept, sect, sections, join, terpakai, pending)
         emKpk = kpk
         emName = name
         emDept = dept
         emSect = sect
+        section = sections
         tanggalJoin = setTanggalJoin(join)
         lamaBekerja = setLamaBekerja(tanggalJoin)
         jatahCuti = setJatahCuti(lamaBekerja, tanggalJoin)
@@ -59,6 +60,10 @@
 
     Public Function getSect()
         Return emSect
+    End Function
+
+    Public Function getSection()
+        Return section
     End Function
 
     Public Function getTanggalJoin()

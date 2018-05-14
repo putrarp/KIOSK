@@ -1,6 +1,7 @@
 ﻿Public Class Login
     Dim Cuti As New Cuti
     Dim Employee As New Employee
+
     Private Sub tbKPK_KeyDown(sender As Object, e As KeyEventArgs) Handles tbKPK.KeyDown
         Dim count As Integer
         Dim KPK As String
@@ -10,11 +11,12 @@
             count = EmployeeTableAdapter.checkKPK(KPK)
             If count = 1 Then
                 EmployeeBindingSource.Filter = "ID = " & KPK
-
+                SectionBindingSource.Filter = "Section = " & EmployeeBindingSource.Current("EMLOC#")
                 Employee.setEmp(Trim(KPK),
                                 Trim(EmployeeBindingSource.Current("EMNAME")),
                                 Trim(EmployeeBindingSource.Current("EMDEPT")),
                                 Trim(EmployeeBindingSource.Current("EMLOC#")),
+                                Trim(SectionBindingSource.Current("sDesc")),
                                 Trim(EmployeeBindingSource.Current("EMCOMM")),
                                 PersonelActionTableAdapter.ApprovedCuti(KPK),
                                 PersonelActionTableAdapter.PendingCuti(KPK))
@@ -29,6 +31,8 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'EmployeeDataSet.dept' table. You can move, or remove it, as needed.
+        Me.DeptTableAdapter.Fill(Me.EmployeeDataSet.dept)
         'TODO: This line of code loads data into the 'Personel_ActionDataSet.approval' table. You can move, or remove it, as needed.
         Me.ApprovalTableAdapter.Fill(Me.Personel_ActionDataSet.approval)
         'TODO: This line of code loads data into the 'Personel_ActionDataSet.actionCode' table. You can move, or remove it, as needed.
@@ -71,9 +75,11 @@
             ProgressBar1.Maximum = 100
 
             ProgressBar1.Value = 30
+            TipeBindingSource.Filter = "ID = " & cbTipeCuti.SelectedValue.ToString
             Cuti.setCuti(cbTipeCuti.SelectedValue.ToString,
-                     tbNomorDarurat.Text.ToString,
-                     dtMulai.Value.Date, dtAkhir.Value.Date)
+                         TipeBindingSource.Current("Description"),
+                         tbNomorDarurat.Text.ToString,
+                         dtMulai.Value.Date, dtAkhir.Value.Date)
             ProgressBar1.Value = 60
             If Employee.getSaldoAkhir - Cuti.getTotalHari >= 0 Then
                 Try
@@ -93,6 +99,8 @@
                     ProgressBar1.Value = 0
                     Exit Sub
                 End Try
+                Print.setObj(Employee, Cuti)
+                Print.Show()
                 ProgressBar1.Value = 100
                 MsgBox("Request cuti telah di input")
                 loginPanel.Visible = True
@@ -103,8 +111,15 @@
                 ProgressBar1.Value = 0
                 tbKPK.Clear()
                 tbKPK.Select()
+
             Else
                 MsgBox("Sisa saldo cuti anda hanya " & Employee.getSaldoAkhir & " Hari")
+                loginPanel.Visible = True
+                menuPanel.Visible = False
+                requestCutiPanel.Visible = False
+                cutikuPanel.Visible = False
+                riwayatCuti.Visible = False
+                ProgressBar1.Value = 0
             End If
         End If
     End Sub
@@ -158,5 +173,6 @@
         requestCutiPanel.Visible = True
         cutikuPanel.Visible = False
     End Sub
+
 
 End Class

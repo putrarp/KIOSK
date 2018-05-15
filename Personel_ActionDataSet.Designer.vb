@@ -1168,9 +1168,9 @@ Partial Public Class Personel_ActionDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddpersonelActionRow(ByVal submitDate As Date, ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Date, ByVal finDate As Date, ByVal totDate As String, ByVal emergencyNumber As String, ByVal status As Integer) As personelActionRow
+        Public Overloads Function AddpersonelActionRow(ByVal ID As String, ByVal submitDate As Date, ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Date, ByVal finDate As Date, ByVal totDate As String, ByVal emergencyNumber As String, ByVal status As Integer) As personelActionRow
             Dim rowpersonelActionRow As personelActionRow = CType(Me.NewRow,personelActionRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDate, totDate, emergencyNumber, status}
+            Dim columnValuesArray() As Object = New Object() {ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDate, totDate, emergencyNumber, status}
             rowpersonelActionRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowpersonelActionRow)
             Return rowpersonelActionRow
@@ -1178,7 +1178,7 @@ Partial Public Class Personel_ActionDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindByID(ByVal ID As Integer) As personelActionRow
+        Public Function FindByID(ByVal ID As String) As personelActionRow
             Return CType(Me.Rows.Find(New Object() {ID}),personelActionRow)
         End Function
         
@@ -1222,7 +1222,7 @@ Partial Public Class Personel_ActionDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnID)
             Me.columnsubmitDate = New Global.System.Data.DataColumn("submitDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnsubmitDate)
@@ -1247,7 +1247,6 @@ Partial Public Class Personel_ActionDataSet
             Me.columnstatus = New Global.System.Data.DataColumn("status", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstatus)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
-            Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
             Me.columnID.AutoIncrementStep = -1
             Me.columnID.AllowDBNull = false
@@ -1664,9 +1663,9 @@ Partial Public Class Personel_ActionDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ID() As Integer
+        Public Property ID() As String
             Get
-                Return CType(Me(Me.tablepersonelAction.IDColumn),Integer)
+                Return CType(Me(Me.tablepersonelAction.IDColumn),String)
             End Get
             Set
                 Me(Me.tablepersonelAction.IDColumn) = value
@@ -2956,7 +2955,7 @@ Namespace Personel_ActionDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(4) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDa"& _ 
@@ -2969,31 +2968,37 @@ Namespace Personel_ActionDataSetTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kpk", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kpk", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDa"& _ 
-                "te, totDate, emergencyNumber, status FROM personelAction WHERE kpk =?"
+            Me._commandCollection(2).CommandText = "SELECT COUNT(*) FROM personelAction WHERE ID = ?"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kpk", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kpk", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ID", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "INSERT INTO `personelAction` (`submitDate`, `actionCode`, `kpk`, `emName`, `emDep"& _ 
-                "t`, `emSection`, `effDate`, `finDate`, `totDate`, `emergencyNumber`) VALUES (?, "& _ 
-                "?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            Me._commandCollection(3).CommandText = "SELECT ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDa"& _ 
+                "te, totDate, emergencyNumber, status FROM personelAction WHERE kpk =?"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("submitDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("actionCode", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "actionCode", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kpk", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kpk", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emName", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emName", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emDept", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emDept", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emSection", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emSection", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("effDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "effDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("finDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "finDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("totDate", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "totDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emergencyNumber", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emergencyNumber", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT SUM(totDate) FROM personelAction WHERE kpk =? AND status = 0"
+            Me._commandCollection(4).CommandText = "INSERT INTO `personelAction` (`ID`, `submitDate`, `actionCode`, `kpk`, `emName`, "& _ 
+                "`emDept`, `emSection`, `effDate`, `finDate`, `totDate`, `emergencyNumber`) VALUE"& _ 
+                "S (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ID", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("submitDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("actionCode", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "actionCode", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kpk", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kpk", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emName", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emName", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emDept", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emDept", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emSection", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emSection", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("effDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "effDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("finDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "finDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("totDate", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "totDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emergencyNumber", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emergencyNumber", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(5) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "SELECT SUM(totDate) FROM personelAction WHERE kpk =? AND status = 0"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kpk", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kpk", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3025,7 +3030,7 @@ Namespace Personel_ActionDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillBy(ByVal dataTable As Personel_ActionDataSet.personelActionDataTable, ByVal kpk As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (kpk Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -3448,59 +3453,95 @@ Namespace Personel_ActionDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function CheckID(ByVal ID As String) As Object
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(2)
+            If (ID Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ID")
+            Else
+                command.Parameters(0).Value = CType(ID,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue,Object)
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InputCuti(ByVal submitDate As Global.System.Nullable(Of Date), ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Global.System.Nullable(Of Date), ByVal finDate As Global.System.Nullable(Of Date), ByVal totDate As String, ByVal emergencyNumber As String) As Integer
-            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
-            If (submitDate.HasValue = true) Then
-                command.Parameters(0).Value = CType(submitDate.Value,Date)
+        Public Overloads Overridable Function InputCuti(ByVal ID As String, ByVal submitDate As Global.System.Nullable(Of Date), ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Global.System.Nullable(Of Date), ByVal finDate As Global.System.Nullable(Of Date), ByVal totDate As String, ByVal emergencyNumber As String) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(4)
+            If (ID Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ID")
             Else
-                command.Parameters(0).Value = Global.System.DBNull.Value
+                command.Parameters(0).Value = CType(ID,String)
+            End If
+            If (submitDate.HasValue = true) Then
+                command.Parameters(1).Value = CType(submitDate.Value,Date)
+            Else
+                command.Parameters(1).Value = Global.System.DBNull.Value
             End If
             If (actionCode Is Nothing) Then
-                command.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(1).Value = CType(actionCode,String)
-            End If
-            If (kpk Is Nothing) Then
                 command.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(2).Value = CType(kpk,String)
+                command.Parameters(2).Value = CType(actionCode,String)
             End If
-            If (emName Is Nothing) Then
+            If (kpk Is Nothing) Then
                 command.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(3).Value = CType(emName,String)
+                command.Parameters(3).Value = CType(kpk,String)
             End If
-            If (emDept Is Nothing) Then
+            If (emName Is Nothing) Then
                 command.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(4).Value = CType(emDept,String)
+                command.Parameters(4).Value = CType(emName,String)
             End If
-            If (emSection Is Nothing) Then
+            If (emDept Is Nothing) Then
                 command.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(5).Value = CType(emSection,String)
+                command.Parameters(5).Value = CType(emDept,String)
+            End If
+            If (emSection Is Nothing) Then
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(6).Value = CType(emSection,String)
             End If
             If (effDate.HasValue = true) Then
-                command.Parameters(6).Value = CType(effDate.Value,Date)
-            Else
-                command.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (finDate.HasValue = true) Then
-                command.Parameters(7).Value = CType(finDate.Value,Date)
+                command.Parameters(7).Value = CType(effDate.Value,Date)
             Else
                 command.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (totDate Is Nothing) Then
-                command.Parameters(8).Value = Global.System.DBNull.Value
+            If (finDate.HasValue = true) Then
+                command.Parameters(8).Value = CType(finDate.Value,Date)
             Else
-                command.Parameters(8).Value = CType(totDate,String)
+                command.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (emergencyNumber Is Nothing) Then
+            If (totDate Is Nothing) Then
                 command.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(9).Value = CType(emergencyNumber,String)
+                command.Parameters(9).Value = CType(totDate,String)
+            End If
+            If (emergencyNumber Is Nothing) Then
+                command.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(10).Value = CType(emergencyNumber,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3522,7 +3563,7 @@ Namespace Personel_ActionDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function PendingCuti(ByVal kpk As String) As Global.System.Nullable(Of Double)
-            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(4)
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(5)
             If (kpk Is Nothing) Then
                 command.Parameters(0).Value = Global.System.DBNull.Value
             Else

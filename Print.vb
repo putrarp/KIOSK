@@ -27,8 +27,9 @@
     End Sub
 
     Public Sub PrintHeader()
+
         Dim LineLen As Integer
-        ID = "*12345*" & Environment.NewLine
+        ID = "*" & Cuti.getID & "*"
         ProgressBar1.Value = ProgressBar1.Value + 10
         head = "PERMOHONAN CUTI"
 
@@ -95,10 +96,9 @@
         With PrintDocument1.DefaultPageSettings
             h = 0
             w = 0
-            left = 35
+            left = 10
             top = 30
         End With
-
 
         Dim lines As Integer = CInt(Math.Round(h / 1))
         Dim b As New Rectangle(left, top, w, h)
@@ -108,16 +108,20 @@
 
         Dim a As New Rectangle(0, 0, w, h)
 
+        'Draw Header
         e.Graphics.MeasureString(Mid(header, currentChar + 1), headfont, New SizeF(w, h), format, chars, line)
         e.Graphics.DrawString(header.Substring(currentChar, chars), New Font("Courier New", 15, FontStyle.Bold), Brushes.Black, a, format)
 
+        'Draw Barcode
         e.Graphics.MeasureString(Mid(ID, currentChar + 1), barfont, New SizeF(w, h), format, chars, line)
-        e.Graphics.DrawString(ID.Substring(currentChar, chars), New Font("3 of 9 Barcode", 35, FontStyle.Regular), Brushes.Black, b, format)
+        e.Graphics.DrawString(ID.Substring(currentChar, chars), New Font("3 of 9 Barcode", 30, FontStyle.Regular), Brushes.Black, b, format)
 
+        'Draw Info (Employee Details & Cuti Deteils)
         Dim c As New Rectangle(0, 80, w, h)
         e.Graphics.MeasureString(Mid(text, currentChar + 1), textfont, New SizeF(w, h), format, chars, line)
         e.Graphics.DrawString(text.Substring(currentChar, chars), New Font("Courier New", 10, FontStyle.Bold), Brushes.Black, c, format)
 
+        'Draw Signature Box
         Dim sisi As Integer = 94
         Dim r1 As New Rectangle(0, 220, sisi, sisi)
         e.Graphics.DrawRectangle(Pens.Black, r1)
@@ -126,7 +130,7 @@
         Dim r3 As New Rectangle(0 + (sisi * 2), 220, sisi, sisi)
         e.Graphics.DrawRectangle(Pens.Black, r3)
 
-
+        'Draw Date Box
         Dim r4 As New Rectangle(0, 294, sisi, 20)
         e.Graphics.DrawRectangle(Pens.Black, r4)
         Dim r5 As New Rectangle(0 + sisi, 294, sisi, 20)

@@ -1,9 +1,10 @@
 ﻿Public Class Cuti
-    Dim tipeCuti, nomorDarurat, tipeCutis As String
+    Dim tipeCuti, nomorDarurat, tipeCutis, idCuti As String
     Dim tglMulai, tglAkhir, tanggalInput As DateTime
     Dim totalHari As Integer
 
-    Public Sub setCuti(tipe, tipes, nomor, mulai, akhir)
+    Public Sub setCuti(ID, tipe, tipes, nomor, mulai, akhir)
+        idCuti = ID
         tanggalInput = Now()
         tipeCuti = tipe
         tipeCutis = tipes
@@ -15,6 +16,10 @@
 
     Private Function kalkulasiHari(mulai, akhir)
         Return akhir.Subtract(mulai).Days + 1
+    End Function
+
+    Public Function getID()
+        Return idCuti
     End Function
 
     Public Function getTanggalInput()

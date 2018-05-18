@@ -3,6 +3,7 @@
 Public Class Login
     Dim Cuti As New Cuti
     Dim Employee As New Employee
+    Dim opt1, opt2 As Integer
 
     Private Sub tbKPK_KeyDown(sender As Object, e As KeyEventArgs) Handles tbKPK.KeyDown
         Dim count As Integer
@@ -30,11 +31,7 @@ Public Class Login
                                 PersonelActionTableAdapter.PendingCuti(KPK))
 
                 'Show menu panel
-                loginPanel.Visible = False
-                menuPanel.Visible = True
-                requestCutiPanel.Visible = False
-                cutikuPanel.Visible = False
-                riwayatCuti.Visible = False
+                Movement.showMenu()
                 Label2.Text = "Selamat Datang, " & Employee.getName
             End If
         End If
@@ -60,25 +57,22 @@ Public Class Login
         Me.Size = SystemInformation.PrimaryMonitorSize
 
         'Show Login Panel
-        loginPanel.Visible = True
-        menuPanel.Visible = False
-        requestCutiPanel.Visible = False
-        cutikuPanel.Visible = False
-        riwayatCuti.Visible = False
+        Movement.showLogin()
 
     End Sub
 
+    'Show Cutiku Panel
     Private Sub btnCutiku_Click(sender As Object, e As EventArgs) Handles btnCutiku.Click
-        'Show Cutiku Panel
-        loginPanel.Visible = False
-        menuPanel.Visible = False
-        requestCutiPanel.Visible = False
-        cutikuPanel.Visible = True
-        riwayatCuti.Visible = False
+        Movement.showCutiku()
         lbSaldoAwal.Text = Employee.getJatahCuti
         lbTerpakai.Text = Employee.getCutiTerpakai
         lbPending.Text = Employee.getCutiPending
         lbSaldoAkhir.Text = Employee.getSaldoAkhir
+    End Sub
+
+    'Show Seragamku Panel
+    Private Sub btnSeragamku_Click(sender As Object, e As EventArgs) Handles btnSeragamku.Click
+        Movement.showSeragamku()
     End Sub
 
     'Show Keypad
@@ -143,22 +137,14 @@ Public Class Login
                 MsgBox("Request cuti telah di input")
 
                 'Show login panel
-                loginPanel.Visible = True
-                menuPanel.Visible = False
-                requestCutiPanel.Visible = False
-                cutikuPanel.Visible = False
-                riwayatCuti.Visible = False
+                Movement.showLogin
                 ProgressBar1.Value = 0
                 tbKPK.Clear()
                 tbKPK.Select()
             Else
                 'Give message that balance is not enough and show login panel
                 MsgBox("Sisa saldo cuti anda hanya " & Employee.getSaldoAkhir & " Hari")
-                loginPanel.Visible = True
-                menuPanel.Visible = False
-                requestCutiPanel.Visible = False
-                cutikuPanel.Visible = False
-                riwayatCuti.Visible = False
+                Movement.showLogin()
                 ProgressBar1.Value = 0
             End If
         End If
@@ -166,57 +152,37 @@ Public Class Login
 
     'Exit to login panel
     Private Sub PictureBox4_Click_1(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        loginPanel.Visible = True
-        menuPanel.Visible = False
-        requestCutiPanel.Visible = False
-        cutikuPanel.Visible = False
-        riwayatCuti.Visible = False
+        Movement.showLogin()
         tbKPK.Clear()
     End Sub
 
     'Back to cutiku panel
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-        loginPanel.Visible = False
-        menuPanel.Visible = False
-        requestCutiPanel.Visible = False
-        cutikuPanel.Visible = True
-        riwayatCuti.Visible = False
+        Movement.showCutiku()
     End Sub
 
     'Back to cutiku panel
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
-        loginPanel.Visible = False
-        menuPanel.Visible = False
-        requestCutiPanel.Visible = False
-        cutikuPanel.Visible = True
-        riwayatCuti.Visible = False
+        Movement.showCutiku()
     End Sub
 
     'Back to menu panel
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
-        loginPanel.Visible = False
-        menuPanel.Visible = True
-        requestCutiPanel.Visible = False
-        cutikuPanel.Visible = False
-        riwayatCuti.Visible = False
+        Movement.showMenu()
+    End Sub
+    'Back to menu panel
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+        Movement.showMenu()
     End Sub
 
     Private Sub btnRiwayat_Click(sender As Object, e As EventArgs) Handles btnRiwayat.Click
-        loginPanel.Visible = False
-        menuPanel.Visible = False
-        requestCutiPanel.Visible = False
-        cutikuPanel.Visible = False
-        riwayatCuti.Visible = True
+        Movement.showRiwayatCuti()
         'Fill cuti history data grid
         Me.PersonelActionTableAdapter.FillBy(Me.Personel_ActionDataSet.personelAction, Employee.getKpk)
     End Sub
 
     Private Sub btnRequest_Click(sender As Object, e As EventArgs) Handles btnRequest.Click
-        loginPanel.Visible = False
-        menuPanel.Visible = False
-        requestCutiPanel.Visible = True
-        cutikuPanel.Visible = False
-        riwayatCuti.Visible = False
+        Movement.showRequestCuti()
     End Sub
 
     'String randomizer
@@ -230,4 +196,39 @@ Public Class Login
         Next
         Return sb.ToString
     End Function
+
+    Private Sub btnOpt1Shirt_Click(sender As Object, e As EventArgs) Handles btnOpt1Shirt.Click
+        btnOpt1Shirt.BackColor = Color.FromArgb(255, 255, 128, 128)
+        btnOpt1Pants.BackColor = Color.FromArgb(255, 255, 192, 128)
+        opt1PanelShirt.Visible = True
+        opt1PanelPants.Visible = False
+        opt1 = 1
+
+    End Sub
+
+    Private Sub btnOpt1Pants_Click(sender As Object, e As EventArgs) Handles btnOpt1Pants.Click
+        btnOpt1Pants.BackColor = Color.FromArgb(255, 255, 128, 128)
+        btnOpt1Shirt.BackColor = Color.FromArgb(255, 255, 192, 128)
+        opt1PanelShirt.Visible = False
+        opt1PanelPants.Visible = True
+        opt1 = 2
+    End Sub
+
+    Private Sub btnOpt2Shirt_Click(sender As Object, e As EventArgs) Handles btnOpt2Shirt.Click
+        btnOpt2Shirt.BackColor = Color.FromArgb(255, 255, 128, 128)
+        btnOpt2Pants.BackColor = Color.FromArgb(255, 255, 255, 128)
+        opt2 = 1
+        opt2PanelShirt.Visible = True
+        opt2PanelPants.Visible = False
+    End Sub
+
+    Private Sub btnOpt2Pants_Click(sender As Object, e As EventArgs) Handles btnOpt2Pants.Click
+        btnOpt2Pants.BackColor = Color.FromArgb(255, 255, 128, 128)
+        btnOpt2Shirt.BackColor = Color.FromArgb(255, 255, 255, 128)
+        opt2 = 2
+        opt2PanelShirt.Visible = False
+        opt2PanelPants.Visible = True
+    End Sub
+
+
 End Class

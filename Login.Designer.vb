@@ -27,41 +27,7 @@ Partial Class Login
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.tbKPK = New System.Windows.Forms.TextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.loginPanel = New System.Windows.Forms.Panel()
-        Me.menuPanel = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.btnCutiku = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.requestCutiPanel = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
-        Me.cbTipeCuti = New System.Windows.Forms.ComboBox()
-        Me.ActionCodeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PersonelActionDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Personel_ActionDataSet = New KIOSK.Personel_ActionDataSet()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.dtMulai = New System.Windows.Forms.DateTimePicker()
-        Me.dtAkhir = New System.Windows.Forms.DateTimePicker()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.tbNomorDarurat = New System.Windows.Forms.TextBox()
-        Me.submitCuti = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.EmployeeTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.EmployeeTableAdapter()
         Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmployeeDataSet = New KIOSK.EmployeeDataSet()
@@ -83,6 +49,90 @@ Partial Class Login
         Me.btnRequest = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PersonelActionDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.menuPanel = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnSeragamku = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnCutiku = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.tbKPK = New System.Windows.Forms.TextBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.loginPanel = New System.Windows.Forms.Panel()
+        Me.ActionCodeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.requestCutiPanel = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.cbTipeCuti = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.dtMulai = New System.Windows.Forms.DateTimePicker()
+        Me.dtAkhir = New System.Windows.Forms.DateTimePicker()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.tbNomorDarurat = New System.Windows.Forms.TextBox()
+        Me.submitCuti = New System.Windows.Forms.FlowLayoutPanel()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.ActionCodeTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.actionCodeTableAdapter()
+        Me.PersonelActionTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.personelActionTableAdapter()
+        Me.ApprovalTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.approvalTableAdapter()
+        Me.SectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DeptTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.deptTableAdapter()
+        Me.TipeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ActionCodeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ApprovalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.seragamkuPanel = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel12 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel14 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnOpt2Pants = New System.Windows.Forms.Button()
+        Me.btnOpt2Shirt = New System.Windows.Forms.Button()
+        Me.opt2Panel = New System.Windows.Forms.Panel()
+        Me.opt2PanelShirt = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.opt2PanelPants = New System.Windows.Forms.Panel()
+        Me.opt1Panel = New System.Windows.Forms.Panel()
+        Me.opt1PanelShirt = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.opt1PanelPants = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel13 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnOpt1Shirt = New System.Windows.Forms.Button()
+        Me.btnOpt1Pants = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.riwayatCuti = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
@@ -96,34 +146,12 @@ Partial Class Login
         Me.TotDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmergencyNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PersonelActionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label25 = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.ApprovalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ActionCodeTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.actionCodeTableAdapter()
-        Me.PersonelActionTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.personelActionTableAdapter()
-        Me.ApprovalTableAdapter = New KIOSK.Personel_ActionDataSetTableAdapters.approvalTableAdapter()
-        Me.SectionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DeptTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.deptTableAdapter()
-        Me.TipeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ActionCodeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.loginPanel.SuspendLayout()
-        Me.menuPanel.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.TableLayoutPanel4.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.requestCutiPanel.SuspendLayout()
-        Me.TableLayoutPanel5.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel6.SuspendLayout()
-        CType(Me.ActionCodeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PersonelActionDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PersonelActionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PersonelActionDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PersonelActionDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.Personel_ActionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cutikuPanel.SuspendLayout()
@@ -131,448 +159,55 @@ Partial Class Login
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel8.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PersonelActionDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.menuPanel.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.loginPanel.SuspendLayout()
+        CType(Me.ActionCodeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.requestCutiPanel.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel6.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TipeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ActionCodeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ApprovalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.seragamkuPanel.SuspendLayout()
+        Me.TableLayoutPanel11.SuspendLayout()
+        Me.TableLayoutPanel12.SuspendLayout()
+        Me.TableLayoutPanel14.SuspendLayout()
+        Me.opt2Panel.SuspendLayout()
+        Me.opt2PanelShirt.SuspendLayout()
+        Me.TableLayoutPanel15.SuspendLayout()
+        Me.opt1Panel.SuspendLayout()
+        Me.opt1PanelShirt.SuspendLayout()
+        Me.TableLayoutPanel16.SuspendLayout()
+        Me.TableLayoutPanel13.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.riwayatCuti.SuspendLayout()
         Me.TableLayoutPanel9.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel10.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ApprovalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SectionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TipeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ActionCodeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PersonelActionDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PersonelActionDataSetBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.PictureBox3, 2, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label8, 0, 2)
-        Me.TableLayoutPanel1.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1276, 859)
-        Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.tbKPK, 0, 1)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(428, 289)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(419, 280)
-        Me.TableLayoutPanel2.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 113)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(413, 27)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "SCAN KPK ANDA"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'tbKPK
-        '
-        Me.tbKPK.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbKPK.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(79, Byte), Integer), CType(CType(152, Byte), Integer))
-        Me.tbKPK.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbKPK.Location = New System.Drawing.Point(3, 143)
-        Me.tbKPK.Name = "tbKPK"
-        Me.tbKPK.Size = New System.Drawing.Size(413, 32)
-        Me.tbKPK.TabIndex = 2
-        Me.tbKPK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.tbKPK.UseSystemPasswordChar = True
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(1219, 811)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(54, 45)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 3
-        Me.PictureBox3.TabStop = False
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(3, 841)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(231, 18)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Tekan Alt + F4 untuk menutupaplikasi ini"
-        '
-        'loginPanel
-        '
-        Me.loginPanel.BackColor = System.Drawing.Color.Transparent
-        Me.loginPanel.Controls.Add(Me.TableLayoutPanel1)
-        Me.loginPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.loginPanel.Location = New System.Drawing.Point(0, 0)
-        Me.loginPanel.Name = "loginPanel"
-        Me.loginPanel.Size = New System.Drawing.Size(1276, 862)
-        Me.loginPanel.TabIndex = 2
-        Me.loginPanel.Visible = False
-        '
-        'menuPanel
-        '
-        Me.menuPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.menuPanel.Controls.Add(Me.TableLayoutPanel3)
-        Me.menuPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.menuPanel.Location = New System.Drawing.Point(0, 0)
-        Me.menuPanel.Name = "menuPanel"
-        Me.menuPanel.Size = New System.Drawing.Size(1276, 862)
-        Me.menuPanel.TabIndex = 2
-        Me.menuPanel.Visible = False
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.ColumnCount = 3
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label2, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.PictureBox1, 2, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.PictureBox4, 2, 0)
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 3
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53377!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93245!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53377!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1276, 862)
-        Me.TableLayoutPanel3.TabIndex = 0
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.ColumnCount = 1
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.FlowLayoutPanel3, 0, 2)
-        Me.TableLayoutPanel4.Controls.Add(Me.FlowLayoutPanel2, 0, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.btnCutiku, 0, 0)
-        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(428, 162)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 3
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(419, 536)
-        Me.TableLayoutPanel4.TabIndex = 0
-        '
-        'FlowLayoutPanel3
-        '
-        Me.FlowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(3, 359)
-        Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
-        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(413, 174)
-        Me.FlowLayoutPanel3.TabIndex = 2
-        '
-        'FlowLayoutPanel2
-        '
-        Me.FlowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.FlowLayoutPanel2.BackgroundImage = CType(resources.GetObject("FlowLayoutPanel2.BackgroundImage"), System.Drawing.Image)
-        Me.FlowLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 181)
-        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(413, 172)
-        Me.FlowLayoutPanel2.TabIndex = 1
-        '
-        'btnCutiku
-        '
-        Me.btnCutiku.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.btnCutiku.BackgroundImage = CType(resources.GetObject("btnCutiku.BackgroundImage"), System.Drawing.Image)
-        Me.btnCutiku.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCutiku.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCutiku.Location = New System.Drawing.Point(3, 3)
-        Me.btnCutiku.Name = "btnCutiku"
-        Me.btnCutiku.Size = New System.Drawing.Size(413, 172)
-        Me.btnCutiku.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label2.Font = New System.Drawing.Font("Bebas Neue Bold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(428, 134)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(419, 25)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Welcome"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1219, 814)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(54, 45)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox4.Location = New System.Drawing.Point(1219, 3)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(54, 50)
-        Me.PictureBox4.TabIndex = 4
-        Me.PictureBox4.TabStop = False
-        '
-        'requestCutiPanel
-        '
-        Me.requestCutiPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.requestCutiPanel.Controls.Add(Me.TableLayoutPanel5)
-        Me.requestCutiPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.requestCutiPanel.Location = New System.Drawing.Point(0, 0)
-        Me.requestCutiPanel.Name = "requestCutiPanel"
-        Me.requestCutiPanel.Size = New System.Drawing.Size(1276, 862)
-        Me.requestCutiPanel.TabIndex = 3
-        Me.requestCutiPanel.Visible = False
-        '
-        'TableLayoutPanel5
-        '
-        Me.TableLayoutPanel5.ColumnCount = 3
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel5.Controls.Add(Me.PictureBox2, 2, 2)
-        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel6, 1, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.Label3, 1, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.PictureBox5, 2, 0)
-        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 3
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53377!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93245!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53377!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(1276, 862)
-        Me.TableLayoutPanel5.TabIndex = 0
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(1219, 814)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(54, 45)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
-        '
-        'TableLayoutPanel6
-        '
-        Me.TableLayoutPanel6.ColumnCount = 1
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel6.Controls.Add(Me.cbTipeCuti, 0, 1)
-        Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
-        Me.TableLayoutPanel6.Controls.Add(Me.Label5, 0, 2)
-        Me.TableLayoutPanel6.Controls.Add(Me.Label6, 0, 4)
-        Me.TableLayoutPanel6.Controls.Add(Me.dtMulai, 0, 3)
-        Me.TableLayoutPanel6.Controls.Add(Me.dtAkhir, 0, 5)
-        Me.TableLayoutPanel6.Controls.Add(Me.Label7, 0, 6)
-        Me.TableLayoutPanel6.Controls.Add(Me.tbNomorDarurat, 0, 7)
-        Me.TableLayoutPanel6.Controls.Add(Me.submitCuti, 0, 9)
-        Me.TableLayoutPanel6.Controls.Add(Me.ProgressBar1, 0, 8)
-        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel6.Location = New System.Drawing.Point(428, 162)
-        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
-        Me.TableLayoutPanel6.RowCount = 10
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.171642!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.276119!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.731343!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.902985!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.544776!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.902985!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.544776!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.089552!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.850746!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.47761!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(419, 536)
-        Me.TableLayoutPanel6.TabIndex = 0
-        '
-        'cbTipeCuti
-        '
-        Me.cbTipeCuti.DataSource = Me.ActionCodeBindingSource
-        Me.cbTipeCuti.DisplayMember = "Description"
-        Me.cbTipeCuti.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cbTipeCuti.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbTipeCuti.FormattingEnabled = True
-        Me.cbTipeCuti.Location = New System.Drawing.Point(3, 19)
-        Me.cbTipeCuti.Name = "cbTipeCuti"
-        Me.cbTipeCuti.Size = New System.Drawing.Size(413, 33)
-        Me.cbTipeCuti.TabIndex = 0
-        Me.cbTipeCuti.ValueMember = "ID"
-        '
-        'ActionCodeBindingSource
-        '
-        Me.ActionCodeBindingSource.DataMember = "actionCode"
-        Me.ActionCodeBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
-        '
-        'PersonelActionDataSetBindingSource
-        '
-        Me.PersonelActionDataSetBindingSource.DataSource = Me.Personel_ActionDataSet
-        Me.PersonelActionDataSetBindingSource.Position = 0
         '
         'Personel_ActionDataSet
         '
         Me.Personel_ActionDataSet.DataSetName = "Personel_ActionDataSet"
         Me.Personel_ActionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label4
-        '
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(413, 16)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Tipe Cuti"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 55)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(413, 18)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Tanggal Mulai"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(3, 109)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(413, 18)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Tanggal Akhir"
-        '
-        'dtMulai
-        '
-        Me.dtMulai.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dtMulai.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtMulai.Location = New System.Drawing.Point(3, 76)
-        Me.dtMulai.Name = "dtMulai"
-        Me.dtMulai.Size = New System.Drawing.Size(413, 31)
-        Me.dtMulai.TabIndex = 4
-        '
-        'dtAkhir
-        '
-        Me.dtAkhir.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dtAkhir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtAkhir.Location = New System.Drawing.Point(3, 130)
-        Me.dtAkhir.Name = "dtAkhir"
-        Me.dtAkhir.Size = New System.Drawing.Size(413, 31)
-        Me.dtAkhir.TabIndex = 5
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(3, 163)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(413, 18)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Nomor yang dapat di hubungi"
-        '
-        'tbNomorDarurat
-        '
-        Me.tbNomorDarurat.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.tbNomorDarurat.Dock = System.Windows.Forms.DockStyle.Top
-        Me.tbNomorDarurat.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNomorDarurat.Location = New System.Drawing.Point(3, 184)
-        Me.tbNomorDarurat.Name = "tbNomorDarurat"
-        Me.tbNomorDarurat.Size = New System.Drawing.Size(413, 31)
-        Me.tbNomorDarurat.TabIndex = 7
-        '
-        'submitCuti
-        '
-        Me.submitCuti.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.submitCuti.BackgroundImage = CType(resources.GetObject("submitCuti.BackgroundImage"), System.Drawing.Image)
-        Me.submitCuti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.submitCuti.Dock = System.Windows.Forms.DockStyle.Top
-        Me.submitCuti.Location = New System.Drawing.Point(3, 246)
-        Me.submitCuti.Name = "submitCuti"
-        Me.submitCuti.Size = New System.Drawing.Size(413, 88)
-        Me.submitCuti.TabIndex = 8
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ProgressBar1.Location = New System.Drawing.Point(3, 221)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(413, 19)
-        Me.ProgressBar1.TabIndex = 9
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label3.Font = New System.Drawing.Font("Bebas Neue Bold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(428, 117)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(419, 42)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Cutiku"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox5.Location = New System.Drawing.Point(1219, 3)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(54, 50)
-        Me.PictureBox5.TabIndex = 3
-        Me.PictureBox5.TabStop = False
         '
         'EmployeeTableAdapter
         '
@@ -832,6 +467,1016 @@ Partial Class Login
         Me.PictureBox7.TabIndex = 3
         Me.PictureBox7.TabStop = False
         '
+        'PersonelActionDataSetBindingSource
+        '
+        Me.PersonelActionDataSetBindingSource.DataMember = "personelAction"
+        Me.PersonelActionDataSetBindingSource.DataSource = Me.Personel_ActionDataSet
+        '
+        'menuPanel
+        '
+        Me.menuPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.menuPanel.Controls.Add(Me.TableLayoutPanel3)
+        Me.menuPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.menuPanel.Location = New System.Drawing.Point(0, 0)
+        Me.menuPanel.Name = "menuPanel"
+        Me.menuPanel.Size = New System.Drawing.Size(1276, 862)
+        Me.menuPanel.TabIndex = 2
+        Me.menuPanel.Visible = False
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 3
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label2, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.PictureBox1, 2, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.PictureBox4, 2, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 3
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53377!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93245!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53377!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1276, 862)
+        Me.TableLayoutPanel3.TabIndex = 0
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 1
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.FlowLayoutPanel3, 0, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.btnSeragamku, 0, 1)
+        Me.TableLayoutPanel4.Controls.Add(Me.btnCutiku, 0, 0)
+        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(428, 162)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 3
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(419, 536)
+        Me.TableLayoutPanel4.TabIndex = 0
+        '
+        'FlowLayoutPanel3
+        '
+        Me.FlowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(3, 359)
+        Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
+        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(413, 174)
+        Me.FlowLayoutPanel3.TabIndex = 2
+        '
+        'btnSeragamku
+        '
+        Me.btnSeragamku.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.btnSeragamku.BackgroundImage = CType(resources.GetObject("btnSeragamku.BackgroundImage"), System.Drawing.Image)
+        Me.btnSeragamku.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnSeragamku.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSeragamku.Location = New System.Drawing.Point(3, 181)
+        Me.btnSeragamku.Name = "btnSeragamku"
+        Me.btnSeragamku.Size = New System.Drawing.Size(413, 172)
+        Me.btnSeragamku.TabIndex = 1
+        '
+        'btnCutiku
+        '
+        Me.btnCutiku.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.btnCutiku.BackgroundImage = CType(resources.GetObject("btnCutiku.BackgroundImage"), System.Drawing.Image)
+        Me.btnCutiku.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCutiku.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnCutiku.Location = New System.Drawing.Point(3, 3)
+        Me.btnCutiku.Name = "btnCutiku"
+        Me.btnCutiku.Size = New System.Drawing.Size(413, 172)
+        Me.btnCutiku.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label2.Font = New System.Drawing.Font("Bebas Neue Bold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(428, 134)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(419, 25)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Welcome"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(1219, 814)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(54, 45)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox4.Location = New System.Drawing.Point(1219, 3)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(54, 50)
+        Me.PictureBox4.TabIndex = 4
+        Me.PictureBox4.TabStop = False
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.PictureBox3, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label8, 0, 2)
+        Me.TableLayoutPanel1.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1276, 859)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.tbKPK, 0, 1)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(428, 289)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(419, 280)
+        Me.TableLayoutPanel2.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 113)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(413, 27)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "SCAN KPK ANDA"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'tbKPK
+        '
+        Me.tbKPK.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbKPK.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(79, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.tbKPK.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbKPK.Location = New System.Drawing.Point(3, 143)
+        Me.tbKPK.Name = "tbKPK"
+        Me.tbKPK.Size = New System.Drawing.Size(413, 32)
+        Me.tbKPK.TabIndex = 2
+        Me.tbKPK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.tbKPK.UseSystemPasswordChar = True
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(1219, 811)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(54, 45)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(3, 841)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(231, 18)
+        Me.Label8.TabIndex = 4
+        Me.Label8.Text = "Tekan Alt + F4 untuk menutupaplikasi ini"
+        '
+        'loginPanel
+        '
+        Me.loginPanel.BackColor = System.Drawing.Color.Transparent
+        Me.loginPanel.Controls.Add(Me.TableLayoutPanel1)
+        Me.loginPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.loginPanel.Location = New System.Drawing.Point(0, 0)
+        Me.loginPanel.Name = "loginPanel"
+        Me.loginPanel.Size = New System.Drawing.Size(1276, 862)
+        Me.loginPanel.TabIndex = 2
+        Me.loginPanel.Visible = False
+        '
+        'ActionCodeBindingSource
+        '
+        Me.ActionCodeBindingSource.DataMember = "actionCode"
+        Me.ActionCodeBindingSource.DataSource = Me.Personel_ActionDataSet
+        '
+        'requestCutiPanel
+        '
+        Me.requestCutiPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.requestCutiPanel.Controls.Add(Me.TableLayoutPanel5)
+        Me.requestCutiPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.requestCutiPanel.Location = New System.Drawing.Point(0, 0)
+        Me.requestCutiPanel.Name = "requestCutiPanel"
+        Me.requestCutiPanel.Size = New System.Drawing.Size(1276, 862)
+        Me.requestCutiPanel.TabIndex = 3
+        Me.requestCutiPanel.Visible = False
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 3
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel5.Controls.Add(Me.PictureBox2, 2, 2)
+        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel6, 1, 1)
+        Me.TableLayoutPanel5.Controls.Add(Me.Label3, 1, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.PictureBox5, 2, 0)
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 3
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53377!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93245!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.53377!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(1276, 862)
+        Me.TableLayoutPanel5.TabIndex = 0
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(1219, 814)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(54, 45)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
+        'TableLayoutPanel6
+        '
+        Me.TableLayoutPanel6.ColumnCount = 1
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel6.Controls.Add(Me.cbTipeCuti, 0, 1)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label4, 0, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label5, 0, 2)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label6, 0, 4)
+        Me.TableLayoutPanel6.Controls.Add(Me.dtMulai, 0, 3)
+        Me.TableLayoutPanel6.Controls.Add(Me.dtAkhir, 0, 5)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label7, 0, 6)
+        Me.TableLayoutPanel6.Controls.Add(Me.tbNomorDarurat, 0, 7)
+        Me.TableLayoutPanel6.Controls.Add(Me.submitCuti, 0, 9)
+        Me.TableLayoutPanel6.Controls.Add(Me.ProgressBar1, 0, 8)
+        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(428, 162)
+        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
+        Me.TableLayoutPanel6.RowCount = 10
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.171642!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.276119!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.731343!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.902985!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.544776!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.902985!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.544776!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.089552!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.850746!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.47761!))
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(419, 536)
+        Me.TableLayoutPanel6.TabIndex = 0
+        '
+        'cbTipeCuti
+        '
+        Me.cbTipeCuti.DataSource = Me.ActionCodeBindingSource
+        Me.cbTipeCuti.DisplayMember = "Description"
+        Me.cbTipeCuti.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cbTipeCuti.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbTipeCuti.FormattingEnabled = True
+        Me.cbTipeCuti.Location = New System.Drawing.Point(3, 19)
+        Me.cbTipeCuti.Name = "cbTipeCuti"
+        Me.cbTipeCuti.Size = New System.Drawing.Size(413, 33)
+        Me.cbTipeCuti.TabIndex = 0
+        Me.cbTipeCuti.ValueMember = "ID"
+        '
+        'Label4
+        '
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(413, 16)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Tipe Cuti"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(3, 55)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(413, 18)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Tanggal Mulai"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(3, 109)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(413, 18)
+        Me.Label6.TabIndex = 3
+        Me.Label6.Text = "Tanggal Akhir"
+        '
+        'dtMulai
+        '
+        Me.dtMulai.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dtMulai.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtMulai.Location = New System.Drawing.Point(3, 76)
+        Me.dtMulai.Name = "dtMulai"
+        Me.dtMulai.Size = New System.Drawing.Size(413, 31)
+        Me.dtMulai.TabIndex = 4
+        '
+        'dtAkhir
+        '
+        Me.dtAkhir.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dtAkhir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtAkhir.Location = New System.Drawing.Point(3, 130)
+        Me.dtAkhir.Name = "dtAkhir"
+        Me.dtAkhir.Size = New System.Drawing.Size(413, 31)
+        Me.dtAkhir.TabIndex = 5
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(3, 163)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(413, 18)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Nomor yang dapat di hubungi"
+        '
+        'tbNomorDarurat
+        '
+        Me.tbNomorDarurat.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.tbNomorDarurat.Dock = System.Windows.Forms.DockStyle.Top
+        Me.tbNomorDarurat.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbNomorDarurat.Location = New System.Drawing.Point(3, 184)
+        Me.tbNomorDarurat.Name = "tbNomorDarurat"
+        Me.tbNomorDarurat.Size = New System.Drawing.Size(413, 31)
+        Me.tbNomorDarurat.TabIndex = 7
+        '
+        'submitCuti
+        '
+        Me.submitCuti.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.submitCuti.BackgroundImage = CType(resources.GetObject("submitCuti.BackgroundImage"), System.Drawing.Image)
+        Me.submitCuti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.submitCuti.Dock = System.Windows.Forms.DockStyle.Top
+        Me.submitCuti.Location = New System.Drawing.Point(3, 246)
+        Me.submitCuti.Name = "submitCuti"
+        Me.submitCuti.Size = New System.Drawing.Size(413, 88)
+        Me.submitCuti.TabIndex = 8
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ProgressBar1.Location = New System.Drawing.Point(3, 221)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(413, 19)
+        Me.ProgressBar1.TabIndex = 9
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label3.Font = New System.Drawing.Font("Bebas Neue Bold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(428, 117)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(419, 42)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Cutiku"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox5.Location = New System.Drawing.Point(1219, 3)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(54, 50)
+        Me.PictureBox5.TabIndex = 3
+        Me.PictureBox5.TabStop = False
+        '
+        'ActionCodeTableAdapter
+        '
+        Me.ActionCodeTableAdapter.ClearBeforeFill = True
+        '
+        'PersonelActionTableAdapter
+        '
+        Me.PersonelActionTableAdapter.ClearBeforeFill = True
+        '
+        'ApprovalTableAdapter
+        '
+        Me.ApprovalTableAdapter.ClearBeforeFill = True
+        '
+        'SectionBindingSource
+        '
+        Me.SectionBindingSource.DataMember = "dept"
+        Me.SectionBindingSource.DataSource = Me.EmployeeDataSet
+        '
+        'DeptTableAdapter
+        '
+        Me.DeptTableAdapter.ClearBeforeFill = True
+        '
+        'TipeBindingSource
+        '
+        Me.TipeBindingSource.DataMember = "actionCode"
+        Me.TipeBindingSource.DataSource = Me.Personel_ActionDataSet
+        '
+        'ActionCodeBindingSource1
+        '
+        Me.ActionCodeBindingSource1.DataMember = "actionCode"
+        Me.ActionCodeBindingSource1.DataSource = Me.PersonelActionDataSetBindingSource
+        '
+        'ApprovalBindingSource
+        '
+        Me.ApprovalBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
+        '
+        'seragamkuPanel
+        '
+        Me.seragamkuPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.seragamkuPanel.Controls.Add(Me.TableLayoutPanel11)
+        Me.seragamkuPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.seragamkuPanel.Location = New System.Drawing.Point(0, 0)
+        Me.seragamkuPanel.Name = "seragamkuPanel"
+        Me.seragamkuPanel.Size = New System.Drawing.Size(1276, 862)
+        Me.seragamkuPanel.TabIndex = 1
+        '
+        'TableLayoutPanel11
+        '
+        Me.TableLayoutPanel11.ColumnCount = 3
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857!))
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
+        Me.TableLayoutPanel11.Controls.Add(Me.TableLayoutPanel12, 1, 1)
+        Me.TableLayoutPanel11.Controls.Add(Me.PictureBox10, 2, 0)
+        Me.TableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel11.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
+        Me.TableLayoutPanel11.RowCount = 3
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel11.Size = New System.Drawing.Size(1276, 862)
+        Me.TableLayoutPanel11.TabIndex = 6
+        '
+        'TableLayoutPanel12
+        '
+        Me.TableLayoutPanel12.ColumnCount = 2
+        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.0!))
+        Me.TableLayoutPanel12.Controls.Add(Me.TableLayoutPanel14, 0, 3)
+        Me.TableLayoutPanel12.Controls.Add(Me.opt2Panel, 1, 3)
+        Me.TableLayoutPanel12.Controls.Add(Me.opt1Panel, 1, 1)
+        Me.TableLayoutPanel12.Controls.Add(Me.TableLayoutPanel13, 0, 1)
+        Me.TableLayoutPanel12.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel12.Controls.Add(Me.Panel3, 0, 2)
+        Me.TableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel12.Location = New System.Drawing.Point(185, 89)
+        Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
+        Me.TableLayoutPanel12.RowCount = 4
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel12.Size = New System.Drawing.Size(905, 683)
+        Me.TableLayoutPanel12.TabIndex = 0
+        '
+        'TableLayoutPanel14
+        '
+        Me.TableLayoutPanel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TableLayoutPanel14.ColumnCount = 1
+        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel14.Controls.Add(Me.btnOpt2Pants, 0, 1)
+        Me.TableLayoutPanel14.Controls.Add(Me.btnOpt2Shirt, 0, 0)
+        Me.TableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel14.Location = New System.Drawing.Point(3, 378)
+        Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
+        Me.TableLayoutPanel14.RowCount = 2
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel14.Size = New System.Drawing.Size(84, 302)
+        Me.TableLayoutPanel14.TabIndex = 5
+        '
+        'btnOpt2Pants
+        '
+        Me.btnOpt2Pants.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnOpt2Pants.BackgroundImage = CType(resources.GetObject("btnOpt2Pants.BackgroundImage"), System.Drawing.Image)
+        Me.btnOpt2Pants.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnOpt2Pants.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOpt2Pants.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOpt2Pants.Location = New System.Drawing.Point(3, 154)
+        Me.btnOpt2Pants.Name = "btnOpt2Pants"
+        Me.btnOpt2Pants.Size = New System.Drawing.Size(78, 145)
+        Me.btnOpt2Pants.TabIndex = 2
+        Me.btnOpt2Pants.UseVisualStyleBackColor = False
+        '
+        'btnOpt2Shirt
+        '
+        Me.btnOpt2Shirt.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnOpt2Shirt.BackgroundImage = CType(resources.GetObject("btnOpt2Shirt.BackgroundImage"), System.Drawing.Image)
+        Me.btnOpt2Shirt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnOpt2Shirt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOpt2Shirt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOpt2Shirt.Location = New System.Drawing.Point(3, 3)
+        Me.btnOpt2Shirt.Name = "btnOpt2Shirt"
+        Me.btnOpt2Shirt.Size = New System.Drawing.Size(78, 145)
+        Me.btnOpt2Shirt.TabIndex = 1
+        Me.btnOpt2Shirt.UseVisualStyleBackColor = False
+        '
+        'opt2Panel
+        '
+        Me.opt2Panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.opt2Panel.Controls.Add(Me.opt2PanelShirt)
+        Me.opt2Panel.Controls.Add(Me.opt2PanelPants)
+        Me.opt2Panel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.opt2Panel.Location = New System.Drawing.Point(93, 378)
+        Me.opt2Panel.Name = "opt2Panel"
+        Me.opt2Panel.Size = New System.Drawing.Size(809, 302)
+        Me.opt2Panel.TabIndex = 1
+        '
+        'opt2PanelShirt
+        '
+        Me.opt2PanelShirt.Controls.Add(Me.TableLayoutPanel15)
+        Me.opt2PanelShirt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.opt2PanelShirt.Location = New System.Drawing.Point(0, 0)
+        Me.opt2PanelShirt.Name = "opt2PanelShirt"
+        Me.opt2PanelShirt.Size = New System.Drawing.Size(809, 302)
+        Me.opt2PanelShirt.TabIndex = 3
+        '
+        'TableLayoutPanel15
+        '
+        Me.TableLayoutPanel15.ColumnCount = 6
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel15.Controls.Add(Me.Button1, 0, 1)
+        Me.TableLayoutPanel15.Controls.Add(Me.Button2, 1, 1)
+        Me.TableLayoutPanel15.Controls.Add(Me.Button11, 2, 1)
+        Me.TableLayoutPanel15.Controls.Add(Me.Button12, 3, 1)
+        Me.TableLayoutPanel15.Controls.Add(Me.Button13, 4, 1)
+        Me.TableLayoutPanel15.Controls.Add(Me.Button14, 5, 1)
+        Me.TableLayoutPanel15.Controls.Add(Me.Button15, 0, 3)
+        Me.TableLayoutPanel15.Controls.Add(Me.Button16, 1, 3)
+        Me.TableLayoutPanel15.Controls.Add(Me.Label19, 0, 0)
+        Me.TableLayoutPanel15.Controls.Add(Me.Label20, 0, 2)
+        Me.TableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel15.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel15.Name = "TableLayoutPanel15"
+        Me.TableLayoutPanel15.RowCount = 4
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.TableLayoutPanel15.Size = New System.Drawing.Size(809, 302)
+        Me.TableLayoutPanel15.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(3, 18)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(128, 129)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "S"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(137, 18)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(128, 129)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "M"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.Location = New System.Drawing.Point(271, 18)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(128, 129)
+        Me.Button11.TabIndex = 2
+        Me.Button11.Text = "L"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button12.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.Location = New System.Drawing.Point(405, 18)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(128, 129)
+        Me.Button12.TabIndex = 3
+        Me.Button12.Text = "XL"
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Button13
+        '
+        Me.Button13.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.Location = New System.Drawing.Point(539, 18)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(128, 129)
+        Me.Button13.TabIndex = 4
+        Me.Button13.Text = "XXL"
+        Me.Button13.UseVisualStyleBackColor = False
+        '
+        'Button14
+        '
+        Me.Button14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button14.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button14.Location = New System.Drawing.Point(673, 18)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(133, 129)
+        Me.Button14.TabIndex = 5
+        Me.Button14.Text = "DL"
+        Me.Button14.UseVisualStyleBackColor = False
+        '
+        'Button15
+        '
+        Me.Button15.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button15.Location = New System.Drawing.Point(3, 168)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(128, 131)
+        Me.Button15.TabIndex = 6
+        Me.Button15.Text = "Button15"
+        Me.Button15.UseVisualStyleBackColor = False
+        '
+        'Button16
+        '
+        Me.Button16.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button16.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Location = New System.Drawing.Point(137, 168)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(128, 131)
+        Me.Button16.TabIndex = 7
+        Me.Button16.Text = "Button16"
+        Me.Button16.UseVisualStyleBackColor = False
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label19.Location = New System.Drawing.Point(3, 2)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(128, 13)
+        Me.Label19.TabIndex = 8
+        Me.Label19.Text = "Ukuran"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label20.Location = New System.Drawing.Point(3, 152)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(128, 13)
+        Me.Label20.TabIndex = 9
+        Me.Label20.Text = "Lengan"
+        '
+        'opt2PanelPants
+        '
+        Me.opt2PanelPants.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.opt2PanelPants.Location = New System.Drawing.Point(0, 0)
+        Me.opt2PanelPants.Name = "opt2PanelPants"
+        Me.opt2PanelPants.Size = New System.Drawing.Size(809, 302)
+        Me.opt2PanelPants.TabIndex = 4
+        '
+        'opt1Panel
+        '
+        Me.opt1Panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.opt1Panel.Controls.Add(Me.opt1PanelShirt)
+        Me.opt1Panel.Controls.Add(Me.opt1PanelPants)
+        Me.opt1Panel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.opt1Panel.Location = New System.Drawing.Point(93, 37)
+        Me.opt1Panel.Name = "opt1Panel"
+        Me.opt1Panel.Size = New System.Drawing.Size(809, 301)
+        Me.opt1Panel.TabIndex = 3
+        '
+        'opt1PanelShirt
+        '
+        Me.opt1PanelShirt.Controls.Add(Me.TableLayoutPanel16)
+        Me.opt1PanelShirt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.opt1PanelShirt.Location = New System.Drawing.Point(0, 0)
+        Me.opt1PanelShirt.Name = "opt1PanelShirt"
+        Me.opt1PanelShirt.Size = New System.Drawing.Size(809, 301)
+        Me.opt1PanelShirt.TabIndex = 2
+        '
+        'TableLayoutPanel16
+        '
+        Me.TableLayoutPanel16.ColumnCount = 6
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel16.Controls.Add(Me.Button3, 0, 1)
+        Me.TableLayoutPanel16.Controls.Add(Me.Button4, 1, 1)
+        Me.TableLayoutPanel16.Controls.Add(Me.Button5, 2, 1)
+        Me.TableLayoutPanel16.Controls.Add(Me.Button6, 3, 1)
+        Me.TableLayoutPanel16.Controls.Add(Me.Button7, 4, 1)
+        Me.TableLayoutPanel16.Controls.Add(Me.Button8, 5, 1)
+        Me.TableLayoutPanel16.Controls.Add(Me.Button9, 0, 3)
+        Me.TableLayoutPanel16.Controls.Add(Me.Button10, 1, 3)
+        Me.TableLayoutPanel16.Controls.Add(Me.Label15, 0, 0)
+        Me.TableLayoutPanel16.Controls.Add(Me.Label17, 0, 2)
+        Me.TableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel16.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel16.Name = "TableLayoutPanel16"
+        Me.TableLayoutPanel16.RowCount = 4
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.TableLayoutPanel16.Size = New System.Drawing.Size(809, 301)
+        Me.TableLayoutPanel16.TabIndex = 0
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(3, 18)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(128, 129)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "S"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(137, 18)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(128, 129)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "M"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(271, 18)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(128, 129)
+        Me.Button5.TabIndex = 2
+        Me.Button5.Text = "L"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(405, 18)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(128, 129)
+        Me.Button6.TabIndex = 3
+        Me.Button6.Text = "XL"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Location = New System.Drawing.Point(539, 18)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(128, 129)
+        Me.Button7.TabIndex = 4
+        Me.Button7.Text = "XXL"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(673, 18)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(133, 129)
+        Me.Button8.TabIndex = 5
+        Me.Button8.Text = "DL"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Location = New System.Drawing.Point(3, 168)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(128, 130)
+        Me.Button9.TabIndex = 6
+        Me.Button9.Text = "Button9"
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button10.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Location = New System.Drawing.Point(137, 168)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(128, 130)
+        Me.Button10.TabIndex = 7
+        Me.Button10.Text = "Button10"
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label15.Location = New System.Drawing.Point(3, 2)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(128, 13)
+        Me.Label15.TabIndex = 8
+        Me.Label15.Text = "Ukuran"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label17.Location = New System.Drawing.Point(3, 152)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(128, 13)
+        Me.Label17.TabIndex = 9
+        Me.Label17.Text = "Lengan"
+        '
+        'opt1PanelPants
+        '
+        Me.opt1PanelPants.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.opt1PanelPants.Location = New System.Drawing.Point(0, 0)
+        Me.opt1PanelPants.Name = "opt1PanelPants"
+        Me.opt1PanelPants.Size = New System.Drawing.Size(809, 301)
+        Me.opt1PanelPants.TabIndex = 1
+        '
+        'TableLayoutPanel13
+        '
+        Me.TableLayoutPanel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TableLayoutPanel13.ColumnCount = 1
+        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel13.Controls.Add(Me.btnOpt1Shirt, 0, 0)
+        Me.TableLayoutPanel13.Controls.Add(Me.btnOpt1Pants, 0, 1)
+        Me.TableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel13.Location = New System.Drawing.Point(3, 37)
+        Me.TableLayoutPanel13.Name = "TableLayoutPanel13"
+        Me.TableLayoutPanel13.RowCount = 2
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel13.Size = New System.Drawing.Size(84, 301)
+        Me.TableLayoutPanel13.TabIndex = 4
+        '
+        'btnOpt1Shirt
+        '
+        Me.btnOpt1Shirt.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnOpt1Shirt.BackgroundImage = CType(resources.GetObject("btnOpt1Shirt.BackgroundImage"), System.Drawing.Image)
+        Me.btnOpt1Shirt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnOpt1Shirt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOpt1Shirt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOpt1Shirt.Location = New System.Drawing.Point(3, 3)
+        Me.btnOpt1Shirt.Name = "btnOpt1Shirt"
+        Me.btnOpt1Shirt.Size = New System.Drawing.Size(78, 144)
+        Me.btnOpt1Shirt.TabIndex = 0
+        Me.btnOpt1Shirt.UseVisualStyleBackColor = False
+        '
+        'btnOpt1Pants
+        '
+        Me.btnOpt1Pants.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnOpt1Pants.BackgroundImage = CType(resources.GetObject("btnOpt1Pants.BackgroundImage"), System.Drawing.Image)
+        Me.btnOpt1Pants.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnOpt1Pants.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOpt1Pants.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOpt1Pants.Location = New System.Drawing.Point(3, 153)
+        Me.btnOpt1Pants.Name = "btnOpt1Pants"
+        Me.btnOpt1Pants.Size = New System.Drawing.Size(78, 145)
+        Me.btnOpt1Pants.TabIndex = 1
+        Me.btnOpt1Pants.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.TableLayoutPanel12.SetColumnSpan(Me.Panel1, 2)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(899, 28)
+        Me.Panel1.TabIndex = 8
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label10.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label10.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(0, 1)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(899, 27)
+        Me.Label10.TabIndex = 8
+        Me.Label10.Text = "Opsi 1"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel3
+        '
+        Me.TableLayoutPanel12.SetColumnSpan(Me.Panel3, 2)
+        Me.Panel3.Controls.Add(Me.Label12)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(3, 344)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(899, 28)
+        Me.Panel3.TabIndex = 9
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label12.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label12.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(0, 1)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(899, 27)
+        Me.Label12.TabIndex = 8
+        Me.Label12.Text = "Opsi 2"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox10.BackgroundImage = CType(resources.GetObject("PictureBox10.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox10.Location = New System.Drawing.Point(1219, 3)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(54, 50)
+        Me.PictureBox10.TabIndex = 4
+        Me.PictureBox10.TabStop = False
+        '
         'riwayatCuti
         '
         Me.riwayatCuti.BackColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(221, Byte), Integer))
@@ -893,7 +1538,6 @@ Partial Class Login
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -907,7 +1551,6 @@ Partial Class Login
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.SubmitDateDataGridViewTextBoxColumn, Me.ActionCodeDataGridViewTextBoxColumn, Me.EffDateDataGridViewTextBoxColumn, Me.FinDateDataGridViewTextBoxColumn, Me.TotDateDataGridViewTextBoxColumn, Me.EmergencyNumberDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.PersonelActionBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -998,11 +1641,6 @@ Partial Class Login
         Me.StatusDataGridViewTextBoxColumn.Name = "StatusDataGridViewTextBoxColumn"
         Me.StatusDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'PersonelActionBindingSource
-        '
-        Me.PersonelActionBindingSource.DataMember = "personelAction"
-        Me.PersonelActionBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
-        '
         'Label25
         '
         Me.Label25.AutoSize = True
@@ -1026,41 +1664,19 @@ Partial Class Login
         Me.PictureBox9.TabIndex = 3
         Me.PictureBox9.TabStop = False
         '
-        'ApprovalBindingSource
+        'PersonelActionBindingSource
         '
-        Me.ApprovalBindingSource.DataMember = "approval"
-        Me.ApprovalBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
+        Me.PersonelActionBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
         '
-        'ActionCodeTableAdapter
+        'PersonelActionDataSetBindingSource1
         '
-        Me.ActionCodeTableAdapter.ClearBeforeFill = True
+        Me.PersonelActionDataSetBindingSource1.DataSource = Me.Personel_ActionDataSet
+        Me.PersonelActionDataSetBindingSource1.Position = 0
         '
-        'PersonelActionTableAdapter
+        'PersonelActionDataSetBindingSource2
         '
-        Me.PersonelActionTableAdapter.ClearBeforeFill = True
-        '
-        'ApprovalTableAdapter
-        '
-        Me.ApprovalTableAdapter.ClearBeforeFill = True
-        '
-        'SectionBindingSource
-        '
-        Me.SectionBindingSource.DataMember = "dept"
-        Me.SectionBindingSource.DataSource = Me.EmployeeDataSet
-        '
-        'DeptTableAdapter
-        '
-        Me.DeptTableAdapter.ClearBeforeFill = True
-        '
-        'TipeBindingSource
-        '
-        Me.TipeBindingSource.DataMember = "actionCode"
-        Me.TipeBindingSource.DataSource = Me.Personel_ActionDataSet
-        '
-        'ActionCodeBindingSource1
-        '
-        Me.ActionCodeBindingSource1.DataMember = "actionCode"
-        Me.ActionCodeBindingSource1.DataSource = Me.PersonelActionDataSetBindingSource
+        Me.PersonelActionDataSetBindingSource2.DataSource = Me.Personel_ActionDataSet
+        Me.PersonelActionDataSetBindingSource2.Position = 0
         '
         'Login
         '
@@ -1073,34 +1689,14 @@ Partial Class Login
         Me.Controls.Add(Me.loginPanel)
         Me.Controls.Add(Me.menuPanel)
         Me.Controls.Add(Me.cutikuPanel)
-        Me.Controls.Add(Me.riwayatCuti)
         Me.Controls.Add(Me.requestCutiPanel)
+        Me.Controls.Add(Me.riwayatCuti)
+        Me.Controls.Add(Me.seragamkuPanel)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Login"
         Me.Text = "KIOSK"
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.loginPanel.ResumeLayout(False)
-        Me.menuPanel.ResumeLayout(False)
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.TableLayoutPanel3.PerformLayout()
-        Me.TableLayoutPanel4.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.requestCutiPanel.ResumeLayout(False)
-        Me.TableLayoutPanel5.ResumeLayout(False)
-        Me.TableLayoutPanel5.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel6.ResumeLayout(False)
-        Me.TableLayoutPanel6.PerformLayout()
-        CType(Me.ActionCodeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PersonelActionDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Personel_ActionDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cutikuPanel.ResumeLayout(False)
@@ -1110,67 +1706,69 @@ Partial Class Login
         Me.TableLayoutPanel8.ResumeLayout(False)
         Me.TableLayoutPanel8.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PersonelActionDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.menuPanel.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
+        Me.TableLayoutPanel4.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.loginPanel.ResumeLayout(False)
+        CType(Me.ActionCodeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.requestCutiPanel.ResumeLayout(False)
+        Me.TableLayoutPanel5.ResumeLayout(False)
+        Me.TableLayoutPanel5.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel6.ResumeLayout(False)
+        Me.TableLayoutPanel6.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SectionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TipeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ActionCodeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ApprovalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.seragamkuPanel.ResumeLayout(False)
+        Me.TableLayoutPanel11.ResumeLayout(False)
+        Me.TableLayoutPanel12.ResumeLayout(False)
+        Me.TableLayoutPanel14.ResumeLayout(False)
+        Me.opt2Panel.ResumeLayout(False)
+        Me.opt2PanelShirt.ResumeLayout(False)
+        Me.TableLayoutPanel15.ResumeLayout(False)
+        Me.TableLayoutPanel15.PerformLayout()
+        Me.opt1Panel.ResumeLayout(False)
+        Me.opt1PanelShirt.ResumeLayout(False)
+        Me.TableLayoutPanel16.ResumeLayout(False)
+        Me.TableLayoutPanel16.PerformLayout()
+        Me.TableLayoutPanel13.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.riwayatCuti.ResumeLayout(False)
         Me.TableLayoutPanel9.ResumeLayout(False)
         Me.TableLayoutPanel9.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel10.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ApprovalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SectionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TipeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ActionCodeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PersonelActionDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PersonelActionDataSetBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Personel_ActionDataSet As Personel_ActionDataSet
     Friend WithEvents EmployeeTableAdapter As EmployeeDataSetTableAdapters.EmployeeTableAdapter
     Friend WithEvents EmployeeBindingSource As BindingSource
     Friend WithEvents EmployeeDataSet As EmployeeDataSet
-    Friend WithEvents loginPanel As Panel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents tbKPK As TextBox
-    Friend WithEvents menuPanel As Panel
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
-    Friend WithEvents FlowLayoutPanel3 As FlowLayoutPanel
-    Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
-    Friend WithEvents btnCutiku As FlowLayoutPanel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents requestCutiPanel As Panel
-    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
-    Friend WithEvents Label3 As Label
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents cbTipeCuti As ComboBox
-    Friend WithEvents PersonelActionDataSetBindingSource As BindingSource
-    Friend WithEvents Personel_ActionDataSet As Personel_ActionDataSet
-    Friend WithEvents ActionCodeBindingSource As BindingSource
-    Friend WithEvents ActionCodeTableAdapter As Personel_ActionDataSetTableAdapters.actionCodeTableAdapter
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents dtMulai As DateTimePicker
-    Friend WithEvents dtAkhir As DateTimePicker
-    Friend WithEvents Label7 As Label
-    Friend WithEvents tbNomorDarurat As TextBox
-    Friend WithEvents submitCuti As FlowLayoutPanel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label8 As Label
     Friend WithEvents cutikuPanel As Panel
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
-    Friend WithEvents Label13 As Label
-    Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Label9 As Label
     Friend WithEvents lbSaldoAwal As Label
     Friend WithEvents Label11 As Label
@@ -1183,17 +1781,68 @@ Partial Class Login
     Friend WithEvents lbSaldoAkhir As Label
     Friend WithEvents btnRiwayat As FlowLayoutPanel
     Friend WithEvents btnRequest As FlowLayoutPanel
+    Friend WithEvents Label13 As Label
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PersonelActionDataSetBindingSource As BindingSource
+    Friend WithEvents menuPanel As Panel
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
+    Friend WithEvents FlowLayoutPanel3 As FlowLayoutPanel
+    Friend WithEvents btnSeragamku As FlowLayoutPanel
+    Friend WithEvents btnCutiku As FlowLayoutPanel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents tbKPK As TextBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents loginPanel As Panel
+    Friend WithEvents ActionCodeBindingSource As BindingSource
+    Friend WithEvents requestCutiPanel As Panel
+    Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
+    Friend WithEvents cbTipeCuti As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents dtMulai As DateTimePicker
+    Friend WithEvents dtAkhir As DateTimePicker
+    Friend WithEvents Label7 As Label
+    Friend WithEvents tbNomorDarurat As TextBox
+    Friend WithEvents submitCuti As FlowLayoutPanel
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents ActionCodeTableAdapter As Personel_ActionDataSetTableAdapters.actionCodeTableAdapter
     Friend WithEvents PersonelActionTableAdapter As Personel_ActionDataSetTableAdapters.personelActionTableAdapter
+    Friend WithEvents ApprovalTableAdapter As Personel_ActionDataSetTableAdapters.approvalTableAdapter
+    Friend WithEvents SectionBindingSource As BindingSource
+    Friend WithEvents DeptTableAdapter As EmployeeDataSetTableAdapters.deptTableAdapter
+    Friend WithEvents TipeBindingSource As BindingSource
+    Friend WithEvents ActionCodeBindingSource1 As BindingSource
+    Friend WithEvents ApprovalBindingSource As BindingSource
+    Friend WithEvents seragamkuPanel As Panel
+    Friend WithEvents TableLayoutPanel11 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel12 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel14 As TableLayoutPanel
+    Friend WithEvents btnOpt2Pants As Button
+    Friend WithEvents btnOpt2Shirt As Button
+    Friend WithEvents TableLayoutPanel13 As TableLayoutPanel
+    Friend WithEvents btnOpt1Shirt As Button
+    Friend WithEvents btnOpt1Pants As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label12 As Label
     Friend WithEvents riwayatCuti As Panel
     Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
-    Friend WithEvents Label25 As Label
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents ApprovalBindingSource As BindingSource
-    Friend WithEvents ApprovalTableAdapter As Personel_ActionDataSetTableAdapters.approvalTableAdapter
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents PersonelActionBindingSource As BindingSource
     Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SubmitDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ActionCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -1202,8 +1851,38 @@ Partial Class Login
     Friend WithEvents TotDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmergencyNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SectionBindingSource As BindingSource
-    Friend WithEvents DeptTableAdapter As EmployeeDataSetTableAdapters.deptTableAdapter
-    Friend WithEvents TipeBindingSource As BindingSource
-    Friend WithEvents ActionCodeBindingSource1 As BindingSource
+    Friend WithEvents Label25 As Label
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PersonelActionBindingSource As BindingSource
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents opt2Panel As Panel
+    Friend WithEvents opt1Panel As Panel
+    Friend WithEvents opt1PanelShirt As Panel
+    Friend WithEvents TableLayoutPanel16 As TableLayoutPanel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Button10 As Button
+    Friend WithEvents opt1PanelPants As Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents opt2PanelShirt As Panel
+    Friend WithEvents TableLayoutPanel15 As TableLayoutPanel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
+    Friend WithEvents Button15 As Button
+    Friend WithEvents Button16 As Button
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents opt2PanelPants As Panel
+    Friend WithEvents PersonelActionDataSetBindingSource2 As BindingSource
+    Friend WithEvents PersonelActionDataSetBindingSource1 As BindingSource
 End Class

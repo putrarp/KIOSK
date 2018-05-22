@@ -1000,6 +1000,8 @@ Partial Public Class Personel_ActionDataSet
         
         Private columnstatus As Global.System.Data.DataColumn
         
+        Private columnremarks As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -1132,6 +1134,14 @@ Partial Public Class Personel_ActionDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property remarksColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnremarks
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1168,9 +1178,9 @@ Partial Public Class Personel_ActionDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddpersonelActionRow(ByVal ID As String, ByVal submitDate As Date, ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Date, ByVal finDate As Date, ByVal totDate As String, ByVal emergencyNumber As String, ByVal status As Integer) As personelActionRow
+        Public Overloads Function AddpersonelActionRow(ByVal ID As String, ByVal submitDate As Date, ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Date, ByVal finDate As Date, ByVal totDate As String, ByVal emergencyNumber As String, ByVal status As Integer, ByVal remarks As String) As personelActionRow
             Dim rowpersonelActionRow As personelActionRow = CType(Me.NewRow,personelActionRow)
-            Dim columnValuesArray() As Object = New Object() {ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDate, totDate, emergencyNumber, status}
+            Dim columnValuesArray() As Object = New Object() {ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDate, totDate, emergencyNumber, status, remarks}
             rowpersonelActionRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowpersonelActionRow)
             Return rowpersonelActionRow
@@ -1217,6 +1227,7 @@ Partial Public Class Personel_ActionDataSet
             Me.columntotDate = MyBase.Columns("totDate")
             Me.columnemergencyNumber = MyBase.Columns("emergencyNumber")
             Me.columnstatus = MyBase.Columns("status")
+            Me.columnremarks = MyBase.Columns("remarks")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1246,6 +1257,8 @@ Partial Public Class Personel_ActionDataSet
             MyBase.Columns.Add(Me.columnemergencyNumber)
             Me.columnstatus = New Global.System.Data.DataColumn("status", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnstatus)
+            Me.columnremarks = New Global.System.Data.DataColumn("remarks", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnremarks)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrementSeed = -1
             Me.columnID.AutoIncrementStep = -1
@@ -1258,6 +1271,7 @@ Partial Public Class Personel_ActionDataSet
             Me.columnemSection.MaxLength = 255
             Me.columntotDate.MaxLength = 255
             Me.columnemergencyNumber.MaxLength = 255
+            Me.columnremarks.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1839,6 +1853,21 @@ Partial Public Class Personel_ActionDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property remarks() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablepersonelAction.remarksColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'remarks' in table 'personelAction' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablepersonelAction.remarksColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IssubmitDateNull() As Boolean
             Return Me.IsNull(Me.tablepersonelAction.submitDateColumn)
         End Function
@@ -1967,6 +1996,18 @@ Partial Public Class Personel_ActionDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetstatusNull()
             Me(Me.tablepersonelAction.statusColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsremarksNull() As Boolean
+            Return Me.IsNull(Me.tablepersonelAction.remarksColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetremarksNull()
+            Me(Me.tablepersonelAction.remarksColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2238,11 +2279,21 @@ Namespace Personel_ActionDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT ID, [no], KPK, emName, approveDate, status FROM approval"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO `approval` (`ID`, `no`, `KPK`, `emName`, `approveDate`, `status`) VAL"& _ 
+                "UES (?, ?, ?, ?, NULL, ?)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ID", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("no", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "no", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("KPK", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "KPK", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emName", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emName", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2345,6 +2396,53 @@ Namespace Personel_ActionDataSetTableAdapters
                     Me.Adapter.InsertCommand.Connection.Close
                 End If
             End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function ApprovalQuery(ByVal ID As String, ByVal no As Global.System.Nullable(Of Integer), ByVal KPK As String, ByVal emName As String, ByVal status As Global.System.Nullable(Of Integer)) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(1)
+            If (ID Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ID")
+            Else
+                command.Parameters(0).Value = CType(ID,String)
+            End If
+            If (no.HasValue = true) Then
+                command.Parameters(1).Value = CType(no.Value,Integer)
+            Else
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (KPK Is Nothing) Then
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(2).Value = CType(KPK,String)
+            End If
+            If (emName Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(emName,String)
+            End If
+            If (status.HasValue = true) Then
+                command.Parameters(4).Value = CType(status.Value,Integer)
+            Else
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
@@ -2842,6 +2940,7 @@ Namespace Personel_ActionDataSetTableAdapters
             tableMapping.ColumnMappings.Add("totDate", "totDate")
             tableMapping.ColumnMappings.Add("emergencyNumber", "emergencyNumber")
             tableMapping.ColumnMappings.Add("status", "status")
+            tableMapping.ColumnMappings.Add("remarks", "remarks")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -2853,9 +2952,10 @@ Namespace Personel_ActionDataSetTableAdapters
                 "Date` IS NULL) OR (`effDate` = ?)) AND ((? = 1 AND `finDate` IS NULL) OR (`finDa"& _ 
                 "te` = ?)) AND ((? = 1 AND `totDate` IS NULL) OR (`totDate` = ?)) AND ((? = 1 AND"& _ 
                 " `emergencyNumber` IS NULL) OR (`emergencyNumber` = ?)) AND ((? = 1 AND `status`"& _ 
-                " IS NULL) OR (`status` = ?)))"
+                " IS NULL) OR (`status` = ?)) AND ((? = 1 AND `remarks` IS NULL) OR (`remarks` = "& _ 
+                "?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_submitDate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_submitDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_actionCode", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "actionCode", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2878,12 +2978,15 @@ Namespace Personel_ActionDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_emergencyNumber", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emergencyNumber", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_remarks", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "remarks", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_remarks", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "remarks", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `personelAction` (`submitDate`, `actionCode`, `kpk`, `emName`, `emDep"& _ 
-                "t`, `emSection`, `effDate`, `finDate`, `totDate`, `emergencyNumber`, `status`) V"& _ 
-                "ALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `personelAction` (`ID`, `submitDate`, `actionCode`, `kpk`, `emName`, "& _ 
+                "`emDept`, `emSection`, `effDate`, `finDate`, `totDate`, `emergencyNumber`, `stat"& _ 
+                "us`, `remarks`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ID", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("submitDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("actionCode", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "actionCode", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kpk", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kpk", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -2895,20 +2998,23 @@ Namespace Personel_ActionDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("totDate", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "totDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emergencyNumber", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emergencyNumber", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("remarks", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "remarks", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `personelAction` SET `submitDate` = ?, `actionCode` = ?, `kpk` = ?, `emNam"& _ 
-                "e` = ?, `emDept` = ?, `emSection` = ?, `effDate` = ?, `finDate` = ?, `totDate` ="& _ 
-                " ?, `emergencyNumber` = ?, `status` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `submi"& _ 
-                "tDate` IS NULL) OR (`submitDate` = ?)) AND ((? = 1 AND `actionCode` IS NULL) OR "& _ 
-                "(`actionCode` = ?)) AND ((? = 1 AND `kpk` IS NULL) OR (`kpk` = ?)) AND ((? = 1 A"& _ 
-                "ND `emName` IS NULL) OR (`emName` = ?)) AND ((? = 1 AND `emDept` IS NULL) OR (`e"& _ 
-                "mDept` = ?)) AND ((? = 1 AND `emSection` IS NULL) OR (`emSection` = ?)) AND ((? "& _ 
-                "= 1 AND `effDate` IS NULL) OR (`effDate` = ?)) AND ((? = 1 AND `finDate` IS NULL"& _ 
-                ") OR (`finDate` = ?)) AND ((? = 1 AND `totDate` IS NULL) OR (`totDate` = ?)) AND"& _ 
-                " ((? = 1 AND `emergencyNumber` IS NULL) OR (`emergencyNumber` = ?)) AND ((? = 1 "& _ 
-                "AND `status` IS NULL) OR (`status` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `personelAction` SET `ID` = ?, `submitDate` = ?, `actionCode` = ?, `kpk` ="& _ 
+                " ?, `emName` = ?, `emDept` = ?, `emSection` = ?, `effDate` = ?, `finDate` = ?, `"& _ 
+                "totDate` = ?, `emergencyNumber` = ?, `status` = ?, `remarks` = ? WHERE ((`ID` = "& _ 
+                "?) AND ((? = 1 AND `submitDate` IS NULL) OR (`submitDate` = ?)) AND ((? = 1 AND "& _ 
+                "`actionCode` IS NULL) OR (`actionCode` = ?)) AND ((? = 1 AND `kpk` IS NULL) OR ("& _ 
+                "`kpk` = ?)) AND ((? = 1 AND `emName` IS NULL) OR (`emName` = ?)) AND ((? = 1 AND"& _ 
+                " `emDept` IS NULL) OR (`emDept` = ?)) AND ((? = 1 AND `emSection` IS NULL) OR (`"& _ 
+                "emSection` = ?)) AND ((? = 1 AND `effDate` IS NULL) OR (`effDate` = ?)) AND ((? "& _ 
+                "= 1 AND `finDate` IS NULL) OR (`finDate` = ?)) AND ((? = 1 AND `totDate` IS NULL"& _ 
+                ") OR (`totDate` = ?)) AND ((? = 1 AND `emergencyNumber` IS NULL) OR (`emergencyN"& _ 
+                "umber` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AN"& _ 
+                "D `remarks` IS NULL) OR (`remarks` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ID", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("submitDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("actionCode", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "actionCode", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kpk", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kpk", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -2920,7 +3026,8 @@ Namespace Personel_ActionDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("totDate", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "totDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emergencyNumber", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emergencyNumber", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("remarks", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "remarks", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_submitDate", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_submitDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_actionCode", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "actionCode", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2943,6 +3050,8 @@ Namespace Personel_ActionDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_emergencyNumber", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emergencyNumber", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_status", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "status", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_remarks", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "remarks", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_remarks", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "remarks", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2959,7 +3068,7 @@ Namespace Personel_ActionDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDa"& _ 
-                "te, totDate, emergencyNumber, status FROM personelAction"
+                "te, totDate, emergencyNumber, status, remarks FROM personelAction"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -2974,14 +3083,15 @@ Namespace Personel_ActionDataSetTableAdapters
             Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "SELECT ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDa"& _ 
-                "te, totDate, emergencyNumber, status FROM personelAction WHERE kpk =?"
+                "te, totDate, emergencyNumber, status, remarks FROM personelAction WHERE (kpk = ?"& _ 
+                ")"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("kpk", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "kpk", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "INSERT INTO `personelAction` (`ID`, `submitDate`, `actionCode`, `kpk`, `emName`, "& _ 
-                "`emDept`, `emSection`, `effDate`, `finDate`, `totDate`, `emergencyNumber`) VALUE"& _ 
-                "S (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "`emDept`, `emSection`, `effDate`, `finDate`, `totDate`, `emergencyNumber`, `rema"& _ 
+                "rks`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ID", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("submitDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "submitDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -2994,6 +3104,7 @@ Namespace Personel_ActionDataSetTableAdapters
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("finDate", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "finDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("totDate", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "totDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("emergencyNumber", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "emergencyNumber", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("remarks", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "remarks", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(5) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(5).Connection = Me.Connection
             Me._commandCollection(5).CommandText = "SELECT SUM(totDate) FROM personelAction WHERE kpk =? AND status = 0"
@@ -3075,8 +3186,12 @@ Namespace Personel_ActionDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_submitDate As Global.System.Nullable(Of Date), ByVal Original_actionCode As String, ByVal Original_kpk As String, ByVal Original_emName As String, ByVal Original_emDept As String, ByVal Original_emSection As String, ByVal Original_effDate As Global.System.Nullable(Of Date), ByVal Original_finDate As Global.System.Nullable(Of Date), ByVal Original_totDate As String, ByVal Original_emergencyNumber As String, ByVal Original_status As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
+        Public Overloads Overridable Function Delete(ByVal Original_ID As String, ByVal Original_submitDate As Global.System.Nullable(Of Date), ByVal Original_actionCode As String, ByVal Original_kpk As String, ByVal Original_emName As String, ByVal Original_emDept As String, ByVal Original_emSection As String, ByVal Original_effDate As Global.System.Nullable(Of Date), ByVal Original_finDate As Global.System.Nullable(Of Date), ByVal Original_totDate As String, ByVal Original_emergencyNumber As String, ByVal Original_status As Global.System.Nullable(Of Integer), ByVal Original_remarks As String) As Integer
+            If (Original_ID Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_ID")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,String)
+            End If
             If (Original_submitDate.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_submitDate.Value,Date)
@@ -3154,6 +3269,13 @@ Namespace Personel_ActionDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
+            If (Original_remarks Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_remarks,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3173,61 +3295,71 @@ Namespace Personel_ActionDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal submitDate As Global.System.Nullable(Of Date), ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Global.System.Nullable(Of Date), ByVal finDate As Global.System.Nullable(Of Date), ByVal totDate As String, ByVal emergencyNumber As String, ByVal status As Global.System.Nullable(Of Integer)) As Integer
-            If (submitDate.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(submitDate.Value,Date)
+        Public Overloads Overridable Function Insert(ByVal ID As String, ByVal submitDate As Global.System.Nullable(Of Date), ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Global.System.Nullable(Of Date), ByVal finDate As Global.System.Nullable(Of Date), ByVal totDate As String, ByVal emergencyNumber As String, ByVal status As Global.System.Nullable(Of Integer), ByVal remarks As String) As Integer
+            If (ID Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ID")
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(ID,String)
+            End If
+            If (submitDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(submitDate.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
             If (actionCode Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(actionCode,String)
-            End If
-            If (kpk Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(kpk,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(actionCode,String)
             End If
-            If (emName Is Nothing) Then
+            If (kpk Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(emName,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(kpk,String)
             End If
-            If (emDept Is Nothing) Then
+            If (emName Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(emDept,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(emName,String)
             End If
-            If (emSection Is Nothing) Then
+            If (emDept Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(emSection,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(emDept,String)
+            End If
+            If (emSection Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(emSection,String)
             End If
             If (effDate.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(effDate.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (finDate.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(finDate.Value,Date)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(effDate.Value,Date)
             Else
                 Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (totDate Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            If (finDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(finDate.Value,Date)
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(totDate,String)
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (emergencyNumber Is Nothing) Then
+            If (totDate Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(emergencyNumber,String)
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(totDate,String)
+            End If
+            If (emergencyNumber Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(emergencyNumber,String)
             End If
             If (status.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(status.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(status.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (remarks Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(remarks,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3249,6 +3381,7 @@ Namespace Personel_ActionDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
+                    ByVal ID As String,  _
                     ByVal submitDate As Global.System.Nullable(Of Date),  _
                     ByVal actionCode As String,  _
                     ByVal kpk As String,  _
@@ -3260,7 +3393,8 @@ Namespace Personel_ActionDataSetTableAdapters
                     ByVal totDate As String,  _
                     ByVal emergencyNumber As String,  _
                     ByVal status As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_ID As Integer,  _
+                    ByVal remarks As String,  _
+                    ByVal Original_ID As String,  _
                     ByVal Original_submitDate As Global.System.Nullable(Of Date),  _
                     ByVal Original_actionCode As String,  _
                     ByVal Original_kpk As String,  _
@@ -3271,139 +3405,161 @@ Namespace Personel_ActionDataSetTableAdapters
                     ByVal Original_finDate As Global.System.Nullable(Of Date),  _
                     ByVal Original_totDate As String,  _
                     ByVal Original_emergencyNumber As String,  _
-                    ByVal Original_status As Global.System.Nullable(Of Integer)) As Integer
-            If (submitDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(submitDate.Value,Date)
+                    ByVal Original_status As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_remarks As String) As Integer
+            If (ID Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ID")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(ID,String)
+            End If
+            If (submitDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(submitDate.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
             If (actionCode Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(actionCode,String)
-            End If
-            If (kpk Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(kpk,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(actionCode,String)
             End If
-            If (emName Is Nothing) Then
+            If (kpk Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(emName,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(kpk,String)
             End If
-            If (emDept Is Nothing) Then
+            If (emName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(emDept,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(emName,String)
             End If
-            If (emSection Is Nothing) Then
+            If (emDept Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(emSection,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(emDept,String)
+            End If
+            If (emSection Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(emSection,String)
             End If
             If (effDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(effDate.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (finDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(finDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(effDate.Value,Date)
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
-            If (totDate Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            If (finDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(finDate.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(totDate,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (emergencyNumber Is Nothing) Then
+            If (totDate Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(emergencyNumber,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(totDate,String)
+            End If
+            If (emergencyNumber Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(emergencyNumber,String)
             End If
             If (status.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(status.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(status.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_ID,Integer)
+            If (remarks Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(remarks,String)
+            End If
+            If (Original_ID Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_ID")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_ID,String)
+            End If
             If (Original_submitDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_submitDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_submitDate.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
-            If (Original_actionCode Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_actionCode,String)
             End If
-            If (Original_kpk Is Nothing) Then
+            If (Original_actionCode Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_kpk,String)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_actionCode,String)
             End If
-            If (Original_emName Is Nothing) Then
+            If (Original_kpk Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_emName,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_kpk,String)
             End If
-            If (Original_emDept Is Nothing) Then
+            If (Original_emName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_emDept,String)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_emName,String)
             End If
-            If (Original_emSection Is Nothing) Then
+            If (Original_emDept Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_emSection,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_emDept,String)
             End If
-            If (Original_effDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_effDate.Value,Date)
-            Else
+            If (Original_emSection Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_emSection,String)
             End If
-            If (Original_finDate.HasValue = true) Then
+            If (Original_effDate.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_finDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_effDate.Value,Date)
             Else
                 Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             End If
-            If (Original_totDate Is Nothing) Then
+            If (Original_finDate.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_finDate.Value,Date)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_totDate,String)
             End If
-            If (Original_emergencyNumber Is Nothing) Then
+            If (Original_totDate Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_emergencyNumber,String)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_totDate,String)
             End If
-            If (Original_status.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_status.Value,Integer)
-            Else
+            If (Original_emergencyNumber Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_emergencyNumber,String)
+            End If
+            If (Original_status.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_status.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+            End If
+            If (Original_remarks Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_remarks,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3418,6 +3574,39 @@ Namespace Personel_ActionDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal submitDate As Global.System.Nullable(Of Date),  _
+                    ByVal actionCode As String,  _
+                    ByVal kpk As String,  _
+                    ByVal emName As String,  _
+                    ByVal emDept As String,  _
+                    ByVal emSection As String,  _
+                    ByVal effDate As Global.System.Nullable(Of Date),  _
+                    ByVal finDate As Global.System.Nullable(Of Date),  _
+                    ByVal totDate As String,  _
+                    ByVal emergencyNumber As String,  _
+                    ByVal status As Global.System.Nullable(Of Integer),  _
+                    ByVal remarks As String,  _
+                    ByVal Original_ID As String,  _
+                    ByVal Original_submitDate As Global.System.Nullable(Of Date),  _
+                    ByVal Original_actionCode As String,  _
+                    ByVal Original_kpk As String,  _
+                    ByVal Original_emName As String,  _
+                    ByVal Original_emDept As String,  _
+                    ByVal Original_emSection As String,  _
+                    ByVal Original_effDate As Global.System.Nullable(Of Date),  _
+                    ByVal Original_finDate As Global.System.Nullable(Of Date),  _
+                    ByVal Original_totDate As String,  _
+                    ByVal Original_emergencyNumber As String,  _
+                    ByVal Original_status As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_remarks As String) As Integer
+            Return Me.Update(Original_ID, submitDate, actionCode, kpk, emName, emDept, emSection, effDate, finDate, totDate, emergencyNumber, status, remarks, Original_ID, Original_submitDate, Original_actionCode, Original_kpk, Original_emName, Original_emDept, Original_emSection, Original_effDate, Original_finDate, Original_totDate, Original_emergencyNumber, Original_status, Original_remarks)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3486,7 +3675,7 @@ Namespace Personel_ActionDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InputCuti(ByVal ID As String, ByVal submitDate As Global.System.Nullable(Of Date), ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Global.System.Nullable(Of Date), ByVal finDate As Global.System.Nullable(Of Date), ByVal totDate As String, ByVal emergencyNumber As String) As Integer
+        Public Overloads Overridable Function InputCuti(ByVal ID As String, ByVal submitDate As Global.System.Nullable(Of Date), ByVal actionCode As String, ByVal kpk As String, ByVal emName As String, ByVal emDept As String, ByVal emSection As String, ByVal effDate As Global.System.Nullable(Of Date), ByVal finDate As Global.System.Nullable(Of Date), ByVal totDate As String, ByVal emergencyNumber As String, ByVal remarks As String) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(4)
             If (ID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("ID")
@@ -3542,6 +3731,11 @@ Namespace Personel_ActionDataSetTableAdapters
                 command.Parameters(10).Value = Global.System.DBNull.Value
             Else
                 command.Parameters(10).Value = CType(emergencyNumber,String)
+            End If
+            If (remarks Is Nothing) Then
+                command.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(11).Value = CType(remarks,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _

@@ -4,6 +4,7 @@ Public Class Login
     Dim Cuti As New Cuti
     Dim Employee As New Employee
     Dim opt1, opt2 As Integer
+    Dim sup(3), sname(3) As String
 
     Private Sub tbKPK_KeyDown(sender As Object, e As KeyEventArgs) Handles tbKPK.KeyDown
         Dim count As Integer
@@ -26,6 +27,7 @@ Public Class Login
                                 Trim(EmployeeBindingSource.Current("EMDEPT")),
                                 Trim(EmployeeBindingSource.Current("EMLOC#")),
                                 Trim(SectionBindingSource.Current("sDesc")),
+                                Trim(EmployeeBindingSource.Current("EMJOBA")),
                                 Trim(EmployeeBindingSource.Current("EMCOMM")),
                                 PersonelActionTableAdapter.ApprovedCuti(KPK),
                                 PersonelActionTableAdapter.PendingCuti(KPK))
@@ -38,6 +40,8 @@ Public Class Login
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'EmployeeDataSet.email' table. You can move, or remove it, as needed.
+        Me.EmailTableAdapter.Fill(Me.EmployeeDataSet.email)
         'TODO: This line of code loads data into the 'EmployeeDataSet.dept' table. You can move, or remove it, as needed.
         Me.DeptTableAdapter.Fill(Me.EmployeeDataSet.dept)
 
@@ -105,7 +109,8 @@ Public Class Login
                          cbTipeCuti.SelectedValue.ToString,
                          TipeBindingSource.Current("Description"),
                          tbNomorDarurat.Text.ToString,
-                         dtMulai.Value.Date, dtAkhir.Value.Date)
+                         dtMulai.Value.Date, dtAkhir.Value.Date,
+                         TipeBindingSource.Current("Description"))
 
             'Check cuti balance is 0 or not
             ProgressBar1.Value = 60
@@ -122,7 +127,8 @@ Public Class Login
                                                          Cuti.getTglMulai,
                                                          Cuti.getTglAkhir,
                                                          Cuti.getTotalHari,
-                                                         Cuti.getNomorDarurat)
+                                                         Cuti.getNomorDarurat,
+                                                         Cuti.getRemarks)
                     ProgressBar1.Value = 90
                 Catch
                     'Error catcher if input is failed
@@ -130,12 +136,24 @@ Public Class Login
                     ProgressBar1.Value = 0
                     Exit Sub
                 End Try
-                'passing employe and cuti object
-                Print.setObj(Employee, Cuti)
-                Print.Show()
+
+                If Employee.getTipe = 0 Then
+                    'passing employe and cuti object
+                    Print.setObj(Employee, Cuti)
+                    Print.Show()
+                ElseIf Employee.getTipe = 1 Then
+                    SendMail.setObj(Employee, Cuti)
+                    Findheir()
+                    EmailBindinSource.Filter = "ID = " & sup(0)
+                    Dim tos = EmailBindinSource.Current("email")
+                    Dim tosn = EmailBindinSource.Current("eName")
+                    EmailBindinSource.Filter = "ID = " & Employee.getKpk
+                    Dim cc = EmailBindinSource.Current("email")
+                    Dim ccn = EmailBindinSource.Current("eName")
+                    SendMail.sendMail(tos, tosn, cc, ccn)
+                End If
                 ProgressBar1.Value = 100
                 MsgBox("Request cuti telah di input")
-
                 'Show login panel
                 Movement.showLogin
                 ProgressBar1.Value = 0
@@ -230,5 +248,29 @@ Public Class Login
         opt2PanelPants.Visible = True
     End Sub
 
+    Private Sub Findheir()
+        Dim i As Integer
 
+        i = 0
+
+        EmployeeBindingSource.Filter = "ID=" & Employee.getKpk
+
+        While (EmployeeBindingSource.Current("EMSUP#") <> "" And EmployeeBindingSource.Current("EMSUP#") <> "907904" And i < 3)
+            EmployeeBindingSource.Filter = "ID=" & EmployeeBindingSource.Current("EMSUP#")
+            sup(i) = EmployeeBindingSource.Current("ID")
+            EmployeeBindingSource.Filter = "ID=" & sup(i)
+            sname(i) = EmployeeBindingSource.Current("EMNAME")
+            DataGridView1.Rows.Add(New String() {sup(i), sname(i)})
+            ApprovalTableAdapter.ApprovalQuery(Cuti.getID, i + 1, sup(i), sname(i), setstatus(i))
+            i = i + 1
+        End While
+    End Sub
+
+    Private Function setstatus(i)
+        If i = 0 Then
+            Return 2
+        Else
+            Return 0
+        End If
+    End Function
 End Class

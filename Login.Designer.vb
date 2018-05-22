@@ -151,6 +151,8 @@ Partial Class Login
         Me.PersonelActionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PersonelActionDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PersonelActionDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmailBindinSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmailTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.emailTableAdapter()
         CType(Me.Personel_ActionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,6 +204,7 @@ Partial Class Login
         CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonelActionDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonelActionDataSetBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmailBindinSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Personel_ActionDataSet
@@ -1678,6 +1681,15 @@ Partial Class Login
         Me.PersonelActionDataSetBindingSource2.DataSource = Me.Personel_ActionDataSet
         Me.PersonelActionDataSetBindingSource2.Position = 0
         '
+        'EmailBindinSource
+        '
+        Me.EmailBindinSource.DataMember = "email"
+        Me.EmailBindinSource.DataSource = Me.EmployeeDataSet
+        '
+        'EmailTableAdapter
+        '
+        Me.EmailTableAdapter.ClearBeforeFill = True
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1757,6 +1769,7 @@ Partial Class Login
         CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonelActionDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonelActionDataSetBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmailBindinSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1885,4 +1898,6 @@ Partial Class Login
     Friend WithEvents opt2PanelPants As Panel
     Friend WithEvents PersonelActionDataSetBindingSource2 As BindingSource
     Friend WithEvents PersonelActionDataSetBindingSource1 As BindingSource
+    Friend WithEvents EmailBindinSource As BindingSource
+    Friend WithEvents EmailTableAdapter As EmployeeDataSetTableAdapters.emailTableAdapter
 End Class

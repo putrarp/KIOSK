@@ -1,6 +1,7 @@
 ﻿Public Class Print
     Dim ID, text, tipe, Nama, awal, akhir, section, kpk, header, head, disetujui As String
-    Dim Employee, Cuti As Object
+    Dim Employee As New Employee
+    Dim Cuti As New Cuti
     Public Sub setObj(emp, cut)
         Employee = emp
         Cuti = cut

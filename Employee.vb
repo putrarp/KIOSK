@@ -1,14 +1,15 @@
 ﻿Public Class Employee
     Dim emKpk, emName, emDept, emSect, section As String
-    Dim lamaBekerja, jatahCuti, cutiTerpakai, cutiPending, saldoAkhir As Decimal
+    Dim lamaBekerja, jatahCuti, cutiTerpakai, cutiPending, saldoAkhir, tipe As Decimal
     Dim tanggalJoin As DateTime
 
-    Public Sub setEmp(kpk, name, dept, sect, sections, join, terpakai, pending)
+    Public Sub setEmp(kpk, name, dept, sect, sections, mJob, join, terpakai, pending)
         emKpk = kpk
         emName = name
         emDept = dept
         emSect = sect
         section = sections
+        tipe = setTipe(mJob)
         tanggalJoin = setTanggalJoin(join)
         lamaBekerja = setLamaBekerja(tanggalJoin)
         jatahCuti = setJatahCuti(lamaBekerja, tanggalJoin)
@@ -44,6 +45,14 @@
 
     Private Function hitungSaldo(jatah, terpakai, pending)
         Return jatah - (terpakai + pending)
+    End Function
+
+    Private Function setTipe(mJob)
+        If mJob = "" Then
+            Return 1
+        Else
+            Return 0
+        End If
     End Function
 
     Public Function getKpk()
@@ -88,5 +97,9 @@
 
     Public Function getSaldoAkhir()
         Return saldoAkhir
+    End Function
+
+    Public Function getTipe()
+        Return tipe
     End Function
 End Class

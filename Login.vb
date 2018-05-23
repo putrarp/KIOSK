@@ -260,7 +260,7 @@ Public Class Login
             sup(i) = EmployeeBindingSource.Current("ID")
             EmployeeBindingSource.Filter = "ID=" & sup(i)
             sname(i) = EmployeeBindingSource.Current("EMNAME")
-            DataGridView1.Rows.Add(New String() {sup(i), sname(i)})
+            'DataGridView1.Rows.Add(New String() {sup(i), sname(i)})
             ApprovalTableAdapter.ApprovalQuery(Cuti.getID, i + 1, Trim(sup(i)), Trim(sname(i)), setstatus(i))
             i = i + 1
         End While

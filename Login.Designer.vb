@@ -138,13 +138,6 @@ Partial Class Login
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PersonelActionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PersonelActionDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PersonelActionDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmailBindinSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmailTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.emailTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SubmitDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ActionCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -154,6 +147,13 @@ Partial Class Login
         Me.EmergencyNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Remarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonelActionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PersonelActionDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PersonelActionDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmailBindinSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmailTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.emailTableAdapter()
         CType(Me.Personel_ActionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,8 +201,8 @@ Partial Class Login
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel10.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonelActionDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonelActionDataSetBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmailBindinSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1581,52 +1581,6 @@ Partial Class Login
         Me.DataGridView1.Size = New System.Drawing.Size(890, 530)
         Me.DataGridView1.TabIndex = 0
         '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label25.Font = New System.Drawing.Font("Bebas Neue Bold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(189, 117)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(896, 42)
-        Me.Label25.TabIndex = 1
-        Me.Label25.Text = "Cutiku"
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox9.Location = New System.Drawing.Point(1219, 3)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(54, 50)
-        Me.PictureBox9.TabIndex = 3
-        Me.PictureBox9.TabStop = False
-        '
-        'PersonelActionBindingSource
-        '
-        Me.PersonelActionBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
-        '
-        'PersonelActionDataSetBindingSource1
-        '
-        Me.PersonelActionDataSetBindingSource1.DataSource = Me.Personel_ActionDataSet
-        Me.PersonelActionDataSetBindingSource1.Position = 0
-        '
-        'PersonelActionDataSetBindingSource2
-        '
-        Me.PersonelActionDataSetBindingSource2.DataSource = Me.Personel_ActionDataSet
-        Me.PersonelActionDataSetBindingSource2.Position = 0
-        '
-        'EmailBindinSource
-        '
-        Me.EmailBindinSource.DataMember = "email"
-        Me.EmailBindinSource.DataSource = Me.EmployeeDataSet
-        '
-        'EmailTableAdapter
-        '
-        Me.EmailTableAdapter.ClearBeforeFill = True
-        '
         'IDDataGridViewTextBoxColumn
         '
         Me.IDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -1683,7 +1637,7 @@ Partial Class Login
         Me.EmergencyNumberDataGridViewTextBoxColumn.HeaderText = "Nomor HP"
         Me.EmergencyNumberDataGridViewTextBoxColumn.Name = "EmergencyNumberDataGridViewTextBoxColumn"
         Me.EmergencyNumberDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EmergencyNumberDataGridViewTextBoxColumn.Width = 106
+        Me.EmergencyNumberDataGridViewTextBoxColumn.Width = 97
         '
         'StatusDataGridViewTextBoxColumn
         '
@@ -1699,6 +1653,52 @@ Partial Class Login
         Me.Remarks.HeaderText = "Remarks"
         Me.Remarks.Name = "Remarks"
         Me.Remarks.ReadOnly = True
+        '
+        'PersonelActionBindingSource
+        '
+        Me.PersonelActionBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label25.Font = New System.Drawing.Font("Bebas Neue Bold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(189, 117)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(896, 42)
+        Me.Label25.TabIndex = 1
+        Me.Label25.Text = "Cutiku"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox9.Location = New System.Drawing.Point(1219, 3)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(54, 50)
+        Me.PictureBox9.TabIndex = 3
+        Me.PictureBox9.TabStop = False
+        '
+        'PersonelActionDataSetBindingSource1
+        '
+        Me.PersonelActionDataSetBindingSource1.DataSource = Me.Personel_ActionDataSet
+        Me.PersonelActionDataSetBindingSource1.Position = 0
+        '
+        'PersonelActionDataSetBindingSource2
+        '
+        Me.PersonelActionDataSetBindingSource2.DataSource = Me.Personel_ActionDataSet
+        Me.PersonelActionDataSetBindingSource2.Position = 0
+        '
+        'EmailBindinSource
+        '
+        Me.EmailBindinSource.DataMember = "email"
+        Me.EmailBindinSource.DataSource = Me.EmployeeDataSet
+        '
+        'EmailTableAdapter
+        '
+        Me.EmailTableAdapter.ClearBeforeFill = True
         '
         'Login
         '
@@ -1775,8 +1775,8 @@ Partial Class Login
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel10.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonelActionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonelActionDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonelActionDataSetBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmailBindinSource, System.ComponentModel.ISupportInitialize).EndInit()

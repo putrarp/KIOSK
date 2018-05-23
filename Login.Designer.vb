@@ -138,6 +138,13 @@ Partial Class Login
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PersonelActionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PersonelActionDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PersonelActionDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmailBindinSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmailTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.emailTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SubmitDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ActionCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -146,13 +153,7 @@ Partial Class Login
         Me.TotDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmergencyNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PersonelActionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PersonelActionDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PersonelActionDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmailBindinSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmailTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.emailTableAdapter()
+        Me.Remarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Personel_ActionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1541,6 +1542,7 @@ Partial Class Login
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -1553,7 +1555,8 @@ Partial Class Login
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.SubmitDateDataGridViewTextBoxColumn, Me.ActionCodeDataGridViewTextBoxColumn, Me.EffDateDataGridViewTextBoxColumn, Me.FinDateDataGridViewTextBoxColumn, Me.TotDateDataGridViewTextBoxColumn, Me.EmergencyNumberDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.SubmitDateDataGridViewTextBoxColumn, Me.ActionCodeDataGridViewTextBoxColumn, Me.EffDateDataGridViewTextBoxColumn, Me.FinDateDataGridViewTextBoxColumn, Me.TotDateDataGridViewTextBoxColumn, Me.EmergencyNumberDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn, Me.Remarks})
+        Me.DataGridView1.DataSource = Me.PersonelActionBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1577,6 +1580,52 @@ Partial Class Login
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.Size = New System.Drawing.Size(890, 530)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label25.Font = New System.Drawing.Font("Bebas Neue Bold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(189, 117)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(896, 42)
+        Me.Label25.TabIndex = 1
+        Me.Label25.Text = "Cutiku"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox9.Location = New System.Drawing.Point(1219, 3)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(54, 50)
+        Me.PictureBox9.TabIndex = 3
+        Me.PictureBox9.TabStop = False
+        '
+        'PersonelActionBindingSource
+        '
+        Me.PersonelActionBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
+        '
+        'PersonelActionDataSetBindingSource1
+        '
+        Me.PersonelActionDataSetBindingSource1.DataSource = Me.Personel_ActionDataSet
+        Me.PersonelActionDataSetBindingSource1.Position = 0
+        '
+        'PersonelActionDataSetBindingSource2
+        '
+        Me.PersonelActionDataSetBindingSource2.DataSource = Me.Personel_ActionDataSet
+        Me.PersonelActionDataSetBindingSource2.Position = 0
+        '
+        'EmailBindinSource
+        '
+        Me.EmailBindinSource.DataMember = "email"
+        Me.EmailBindinSource.DataSource = Me.EmployeeDataSet
+        '
+        'EmailTableAdapter
+        '
+        Me.EmailTableAdapter.ClearBeforeFill = True
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -1634,7 +1683,7 @@ Partial Class Login
         Me.EmergencyNumberDataGridViewTextBoxColumn.HeaderText = "Nomor HP"
         Me.EmergencyNumberDataGridViewTextBoxColumn.Name = "EmergencyNumberDataGridViewTextBoxColumn"
         Me.EmergencyNumberDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EmergencyNumberDataGridViewTextBoxColumn.Width = 97
+        Me.EmergencyNumberDataGridViewTextBoxColumn.Width = 106
         '
         'StatusDataGridViewTextBoxColumn
         '
@@ -1644,51 +1693,12 @@ Partial Class Login
         Me.StatusDataGridViewTextBoxColumn.Name = "StatusDataGridViewTextBoxColumn"
         Me.StatusDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'Label25
+        'Remarks
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label25.Font = New System.Drawing.Font("Bebas Neue Bold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(189, 117)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(896, 42)
-        Me.Label25.TabIndex = 1
-        Me.Label25.Text = "Cutiku"
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox9.Location = New System.Drawing.Point(1219, 3)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(54, 50)
-        Me.PictureBox9.TabIndex = 3
-        Me.PictureBox9.TabStop = False
-        '
-        'PersonelActionBindingSource
-        '
-        Me.PersonelActionBindingSource.DataSource = Me.PersonelActionDataSetBindingSource
-        '
-        'PersonelActionDataSetBindingSource1
-        '
-        Me.PersonelActionDataSetBindingSource1.DataSource = Me.Personel_ActionDataSet
-        Me.PersonelActionDataSetBindingSource1.Position = 0
-        '
-        'PersonelActionDataSetBindingSource2
-        '
-        Me.PersonelActionDataSetBindingSource2.DataSource = Me.Personel_ActionDataSet
-        Me.PersonelActionDataSetBindingSource2.Position = 0
-        '
-        'EmailBindinSource
-        '
-        Me.EmailBindinSource.DataMember = "email"
-        Me.EmailBindinSource.DataSource = Me.EmployeeDataSet
-        '
-        'EmailTableAdapter
-        '
-        Me.EmailTableAdapter.ClearBeforeFill = True
+        Me.Remarks.DataPropertyName = "remarks"
+        Me.Remarks.HeaderText = "Remarks"
+        Me.Remarks.Name = "Remarks"
+        Me.Remarks.ReadOnly = True
         '
         'Login
         '
@@ -1698,11 +1708,11 @@ Partial Class Login
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1276, 862)
         Me.ControlBox = False
+        Me.Controls.Add(Me.riwayatCuti)
         Me.Controls.Add(Me.loginPanel)
         Me.Controls.Add(Me.menuPanel)
         Me.Controls.Add(Me.cutikuPanel)
         Me.Controls.Add(Me.requestCutiPanel)
-        Me.Controls.Add(Me.riwayatCuti)
         Me.Controls.Add(Me.seragamkuPanel)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1856,14 +1866,6 @@ Partial Class Login
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents TableLayoutPanel10 As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SubmitDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ActionCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EffDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FinDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TotDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmergencyNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Label25 As Label
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents PersonelActionBindingSource As BindingSource
@@ -1900,4 +1902,13 @@ Partial Class Login
     Friend WithEvents PersonelActionDataSetBindingSource1 As BindingSource
     Friend WithEvents EmailBindinSource As BindingSource
     Friend WithEvents EmailTableAdapter As EmployeeDataSetTableAdapters.emailTableAdapter
+    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SubmitDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ActionCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EffDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FinDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TotDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmergencyNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Remarks As DataGridViewTextBoxColumn
 End Class

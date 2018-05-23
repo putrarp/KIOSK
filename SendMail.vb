@@ -16,15 +16,15 @@ Module SendMail
         ' Create a new MailItem.
         Dim oMsg As Outlook.MailItem
         oMsg = oApp.CreateItem(Outlook.OlItemType.olMailItem)
-        oMsg.Subject = "PERMOHONAN CUTI - " & Employee.getName
-        oMsg.Body = "Bapak/Ibu " & tosn & "," & vbNewLine & vbNewLine &
-                    "Berikut saya ajukan permohonan cuti saya agar dapat disetuji" & vbNewLine & vbNewLine &
-                    "KPK = " & Employee.getKpk & vbNewLine &
-                    "Nama = " & Employee.getName & vbNewLine &
-                    "Tanggal Mulai = " & Cuti.getTglMulai & vbNewLine &
-                    "Tanggal Akhir = " & Cuti.getTglAkhir & vbNewLine & vbNewLine &
-                    "Terimakasih," & vbNewLine &
-                    ccn
+        oMsg.Subject = "LEAVE REQUEST - " & Employee.getName
+        oMsg.HTMLBody = "<html>Dear " & tosn & ",<br><br>" &
+                    "I have submit Leave Request, please review the Request below by clicking <a href='\\apckrm06a\Public\NEW KIOSK\APPROVAL\Approval.application'>THIS LINK</a><br><br>" &
+                    "KPK = " & Employee.getKpk & "<br>" &
+                    "Name = " & Employee.getName & "<br>" &
+                    "Effective Date = " & Cuti.getTglMulai & "<br>" &
+                    "End Date = " & Cuti.getTglAkhir & "<br>" & "<br>" &
+                    "Thanks & Regards,<br>" &
+                    ccn & "</html>"
         ' TODO: Replace with a valid e-mail address.
         oMsg.To = tos
         oMsg.CC = cc

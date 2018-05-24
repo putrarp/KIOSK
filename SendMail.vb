@@ -41,7 +41,7 @@ Module SendMail
         'oAttach = oAttachs.Add(sSource, , sBodyLen + 1, sDisplayName)
 
         ' Send
-        oMsg.Display()
+        oMsg.Send()
 
         ' Clean up
         oApp = Nothing

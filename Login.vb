@@ -30,7 +30,8 @@ Public Class Login
                                 Trim(EmployeeBindingSource.Current("EMJOBA")),
                                 Trim(EmployeeBindingSource.Current("EMCOMM")),
                                 PersonelActionTableAdapter.ApprovedCuti(KPK),
-                                PersonelActionTableAdapter.PendingCuti(KPK))
+                                PersonelActionTableAdapter.PendingCuti(KPK),
+                                PersonelActionTableAdapter.BonusCuti(KPK))
 
                 'Show menu panel
                 Movement.showMenu()
@@ -69,6 +70,7 @@ Public Class Login
     Private Sub btnCutiku_Click(sender As Object, e As EventArgs) Handles btnCutiku.Click
         Movement.showCutiku()
         lbSaldoAwal.Text = Employee.getJatahCuti
+        lbBonus.Text = Employee.getBonusCuti
         lbTerpakai.Text = Employee.getCutiTerpakai
         lbPending.Text = Employee.getCutiPending
         lbSaldoAkhir.Text = Employee.getSaldoAkhir

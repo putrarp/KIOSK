@@ -14,7 +14,7 @@
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>\\apckrm06a\Public\NEW KIOSK\KIOSK\</PublishUrl>
+    <PublishUrl>\\apckrm06a\Public\NEW KIOS\KIOSK\</PublishUrl>
     <Install>false</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>

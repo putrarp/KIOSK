@@ -275,4 +275,105 @@ Public Class Login
             Return 0
         End If
     End Function
+
+    Private Sub ss(sender As Object, e As EventArgs) Handles s1s.Click, s2s.Click
+        Movement.ss()
+    End Sub
+
+    Private Sub sm(sender As Object, e As EventArgs) Handles s1m.Click, s2m.Click
+        Movement.sm()
+    End Sub
+
+    Private Sub sl(sender As Object, e As EventArgs) Handles s1l.Click, s2l.Click
+        Movement.sl()
+    End Sub
+
+    Private Sub sxl(sender As Object, e As EventArgs) Handles s1xl.Click, s2xl.Click
+        Movement.sxl()
+    End Sub
+
+    Private Sub sxxl(sender As Object, e As EventArgs) Handles s1xxl.Click, s2xxl.Click
+        Movement.sxxl()
+    End Sub
+
+    Private Sub sdl(sender As Object, e As EventArgs) Handles s1dl.Click, s2dl.Click
+        Movement.sdl()
+    End Sub
+
+    Private Sub sShort(sender As Object, e As EventArgs) Handles s1Short.Click, s2Short.Click
+        Movement.sShort()
+    End Sub
+
+    Private Sub sLong(sender As Object, e As EventArgs) Handles s1Long.Click, s2Long.Click
+        Movement.sLong()
+    End Sub
+
+    Private Sub p26(sender As Object, e As EventArgs) Handles p126.Click, p226.Click
+        Movement.p26()
+    End Sub
+
+    Private Sub p27(sender As Object, e As EventArgs) Handles p127.Click, p227.Click
+        Movement.p27()
+    End Sub
+
+    Private Sub p28(sender As Object, e As EventArgs) Handles p128.Click, p228.Click
+        Movement.p28()
+    End Sub
+
+    Private Sub p29(sender As Object, e As EventArgs) Handles p129.Click, p229.Click
+        Movement.p29()
+    End Sub
+
+    Private Sub p30(sender As Object, e As EventArgs) Handles p130.Click, p230.Click
+        Movement.p30()
+    End Sub
+
+    Private Sub p31(sender As Object, e As EventArgs) Handles p131.Click, p231.Click
+        Movement.p31()
+    End Sub
+
+    Private Sub p32(sender As Object, e As EventArgs) Handles p132.Click, p232.Click
+        Movement.p32()
+    End Sub
+
+    Private Sub p33(sender As Object, e As EventArgs) Handles p133.Click, p233.Click
+        Movement.p33()
+    End Sub
+
+    Private Sub p34(sender As Object, e As EventArgs) Handles p134.Click, p234.Click
+        Movement.p34()
+    End Sub
+
+    Private Sub p35(sender As Object, e As EventArgs) Handles p135.Click, p235.Click
+        Movement.p35()
+    End Sub
+
+    Private Sub p36(sender As Object, e As EventArgs) Handles p136.Click, p236.Click
+        Movement.p36()
+    End Sub
+
+    Private Sub p37(sender As Object, e As EventArgs) Handles p137.Click, p237.Click
+        Movement.p37()
+    End Sub
+
+    Private Sub p38(sender As Object, e As EventArgs) Handles p138.Click, p238.Click
+        Movement.p38()
+    End Sub
+
+    Private Sub p39(sender As Object, e As EventArgs) Handles p139.Click, p239.Click
+        Movement.p39()
+    End Sub
+
+    Private Sub p40(sender As Object, e As EventArgs) Handles p140.Click, p240.Click
+        Movement.p40()
+    End Sub
+
+    Private Sub p41(sender As Object, e As EventArgs) Handles p141.Click, p241.Click
+        Movement.p41()
+    End Sub
+
+    Private Sub p42(sender As Object, e As EventArgs) Handles p142.Click, p242.Click
+        Movement.p42()
+    End Sub
+
 End Class

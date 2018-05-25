@@ -32,14 +32,23 @@
         Dim y = Left(ultah, 4)
         Dim m = Mid(ultah, 5, 2)
         Dim d = Right(ultah, 2)
-        Return Convert.ToDateTime(m - 1 & "/" & 1 & "/" & Today().Year)
+        If m - 1 = 0 Then
+            Return Convert.ToDateTime(12 & "/" & 1 & "/" & Today().Year)
+        Else
+            Return Convert.ToDateTime(m - 1 & "/" & 1 & "/" & Today().Year)
+        End If
+
     End Function
 
     Private Function setAkhir(ultah)
         Dim y = Left(ultah, 4)
         Dim m = Mid(ultah, 5, 2)
         Dim d = Right(ultah, 2)
-        Return Convert.ToDateTime(m - 1 & "/" & 9 & "/" & Today().Year)
+        If m - 1 = 0 Then
+            Return Convert.ToDateTime(12 & "/" & 9 & "/" & Today().Year)
+        Else
+            Return Convert.ToDateTime(m - 1 & "/" & 9 & "/" & Today().Year)
+        End If
     End Function
 
     Private Function setLamaBekerja(tanggalJoin)

@@ -54,4 +54,8 @@
     Public Function getRemarks()
         Return remarksCuti
     End Function
+
+    Public Sub setRemarks(remarks)
+        remarksCuti = remarks
+    End Sub
 End Class

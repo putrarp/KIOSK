@@ -9,12 +9,12 @@
     End Sub
 
     Public Sub showLogin()
-        Login.loginPanel.Visible = False
+        Login.loginPanel.Visible = True
         Login.menuPanel.Visible = False
         Login.requestCutiPanel.Visible = False
         Login.cutikuPanel.Visible = False
         Login.riwayatCuti.Visible = False
-        Login.seragamkuPanel.Visible = True
+        Login.seragamkuPanel.Visible = False
     End Sub
 
     Public Sub showCutiku()

@@ -3,8 +3,8 @@
 Public Class Login
     Dim Cuti As New Cuti
     Dim Employee As New Employee
-    Dim opt1, opt2 As Integer
-    Dim sup(3), sname(3) As String
+    Dim opt1, opt2, pSize, p1Type, p2Type As Integer
+    Dim sup(3), sname(3), sType, sSize As String
 
     Private Sub tbKPK_KeyDown(sender As Object, e As KeyEventArgs) Handles tbKPK.KeyDown
         Dim count As Integer
@@ -31,8 +31,8 @@ Public Class Login
                                 Trim(EmployeeBindingSource.Current("EMCOMM")),
                                 PersonelActionTableAdapter.ApprovedCuti(KPK),
                                 PersonelActionTableAdapter.PendingCuti(KPK),
-                                PersonelActionTableAdapter.BonusCuti(KPK))
-
+                                PersonelActionTableAdapter.BonusCuti(KPK),
+                                Trim(EmployeeBindingSource.Current("EMBIRT")))
                 'Show menu panel
                 Movement.showMenu()
                 Label2.Text = "Selamat Datang, " & Employee.getName
@@ -41,6 +41,9 @@ Public Class Login
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        opt1 = 1
+        opt2 = 1
+
         'TODO: This line of code loads data into the 'EmployeeDataSet.email' table. You can move, or remove it, as needed.
         Me.EmailTableAdapter.Fill(Me.EmployeeDataSet.email)
         'TODO: This line of code loads data into the 'EmployeeDataSet.dept' table. You can move, or remove it, as needed.
@@ -78,7 +81,17 @@ Public Class Login
 
     'Show Seragamku Panel
     Private Sub btnSeragamku_Click(sender As Object, e As EventArgs) Handles btnSeragamku.Click
-        Movement.showSeragamku()
+        Dim buka = Convert.ToDateTime(11 & "/" & 1 & "/" & Today().Year)
+        Dim tutup = Convert.ToDateTime(11 & "/" & 8 & "/" & Today().Year)
+        If Employee.getTipe = 0 Then
+            If (Now() > Employee.getAwal And Now() < Employee.getAkhir) Or (Now() > buka And Now < tutup) Then
+                Movement.showSeragamku()
+            Else
+                MsgBox("Anda dapat menggunakan menu ini pada tanggal " & Employee.getAwal.Date & " hingga tanggal " & Employee.getAkhir.AddDays(-1).Date)
+            End If
+        Else
+            MsgBox("Menu Ini Hanya Untuk Operator")
+        End If
     End Sub
 
     'Show Keypad
@@ -118,6 +131,13 @@ Public Class Login
             ProgressBar1.Value = 60
             If Employee.getSaldoAkhir - Cuti.getTotalHari >= 0 Then
                 Try
+                    If Employee.getTipe = 1 Then
+                        Dim remarks = InputBox("Is There Any Remarks?", "Any Remarks?")
+                        If remarks = "" Then
+                        Else
+                            Cuti.setRemarks(remarks)
+                        End If
+                    End If
                     'Input cuti request to database
                     PersonelActionTableAdapter.InputCuti(Cuti.getID,
                                                          Cuti.getTanggalInput,
@@ -217,6 +237,32 @@ Public Class Login
         Return sb.ToString
     End Function
 
+    Private Sub Findheir()
+        Dim i As Integer
+
+        i = 0
+
+        EmployeeBindingSource.Filter = "ID=" & Employee.getKpk
+
+        While (EmployeeBindingSource.Current("EMSUP#") <> "" And EmployeeBindingSource.Current("EMSUP#") <> "907904" And i < 3)
+            EmployeeBindingSource.Filter = "ID=" & EmployeeBindingSource.Current("EMSUP#")
+            sup(i) = EmployeeBindingSource.Current("ID")
+            EmployeeBindingSource.Filter = "ID=" & sup(i)
+            sname(i) = EmployeeBindingSource.Current("EMNAME")
+            'DataGridView1.Rows.Add(New String() {sup(i), sname(i)})
+            ApprovalTableAdapter.ApprovalQuery(Cuti.getID, i + 1, Trim(sup(i)), Trim(sname(i)), setstatus(i))
+            i = i + 1
+        End While
+    End Sub
+
+    Private Function setstatus(i)
+        If i = 0 Then
+            Return 2
+        Else
+            Return 0
+        End If
+    End Function
+
     Private Sub btnOpt1Shirt_Click(sender As Object, e As EventArgs) Handles btnOpt1Shirt.Click
         btnOpt1Shirt.BackColor = Color.FromArgb(255, 255, 128, 128)
         btnOpt1Pants.BackColor = Color.FromArgb(255, 255, 192, 128)
@@ -250,58 +296,39 @@ Public Class Login
         opt2PanelPants.Visible = True
     End Sub
 
-    Private Sub Findheir()
-        Dim i As Integer
-
-        i = 0
-
-        EmployeeBindingSource.Filter = "ID=" & Employee.getKpk
-
-        While (EmployeeBindingSource.Current("EMSUP#") <> "" And EmployeeBindingSource.Current("EMSUP#") <> "907904" And i < 3)
-            EmployeeBindingSource.Filter = "ID=" & EmployeeBindingSource.Current("EMSUP#")
-            sup(i) = EmployeeBindingSource.Current("ID")
-            EmployeeBindingSource.Filter = "ID=" & sup(i)
-            sname(i) = EmployeeBindingSource.Current("EMNAME")
-            'DataGridView1.Rows.Add(New String() {sup(i), sname(i)})
-            ApprovalTableAdapter.ApprovalQuery(Cuti.getID, i + 1, Trim(sup(i)), Trim(sname(i)), setstatus(i))
-            i = i + 1
-        End While
-    End Sub
-
-    Private Function setstatus(i)
-        If i = 0 Then
-            Return 2
-        Else
-            Return 0
-        End If
-    End Function
-
     Private Sub ss(sender As Object, e As EventArgs) Handles s1s.Click, s2s.Click
         Movement.ss()
+        sSize = "S"
     End Sub
 
     Private Sub sm(sender As Object, e As EventArgs) Handles s1m.Click, s2m.Click
         Movement.sm()
+        sSize = "M"
     End Sub
 
     Private Sub sl(sender As Object, e As EventArgs) Handles s1l.Click, s2l.Click
         Movement.sl()
+        sSize = "L"
     End Sub
 
     Private Sub sxl(sender As Object, e As EventArgs) Handles s1xl.Click, s2xl.Click
         Movement.sxl()
+        sSize = "XL"
     End Sub
 
     Private Sub sxxl(sender As Object, e As EventArgs) Handles s1xxl.Click, s2xxl.Click
         Movement.sxxl()
+        sSize = "XXL"
     End Sub
 
     Private Sub sdl(sender As Object, e As EventArgs) Handles s1dl.Click, s2dl.Click
         Movement.sdl()
+        sSize = "DL"
     End Sub
 
     Private Sub sShort(sender As Object, e As EventArgs) Handles s1Short.Click, s2Short.Click
         Movement.sShort()
+        sType = "S"
     End Sub
 
     Private Sub sLong(sender As Object, e As EventArgs) Handles s1Long.Click, s2Long.Click

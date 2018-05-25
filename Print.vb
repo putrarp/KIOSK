@@ -13,7 +13,7 @@
         ProgressBar1.Minimum = 0
         ProgressBar1.Value = 0
         'PrintDocument1.PrinterSettings.PrinterName = "EPSON TM-T88V Receipt"
-        PrintDocument1.PrinterSettings.PrinterName = "Microsoft XPS Document Writer"
+        'PrintDocument1.PrinterSettings.PrinterName = "Microsoft XPS Document Writer"
         PrintHeader()
 
         Dim printControl = New Printing.StandardPrintController
@@ -89,15 +89,15 @@
 
     Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Static currentChar As Integer
-        Dim headfont As Font = New Font("Courier New", 15, FontStyle.Bold)
-        Dim textfont As Font = New Font("Courier New", 10, FontStyle.Bold)
-        Dim barfont As Font = New Font("3 of 9 Barcode", 35, FontStyle.Regular)
+        Dim headfont As Font = New Font("Courier New", 15, FontStyle.Bold)'15
+        Dim textfont As Font = New Font("Courier New", 10, FontStyle.Bold) '10
+        Dim barfont As Font = New Font("3 of 9 Barcode", 35, FontStyle.Regular) '35
         Dim h, w As Integer
         Dim left, top As Integer
         With PrintDocument1.DefaultPageSettings
             h = 0
             w = 0
-            left = 10
+            left = 20
             top = 30
         End With
 
@@ -107,36 +107,36 @@
         format = New StringFormat(StringFormatFlags.LineLimit)
         Dim line, chars As Integer
 
-        Dim a As New Rectangle(0, 0, w, h)
+        Dim a As New Rectangle(10, 0, w, h)
 
         'Draw Header
         e.Graphics.MeasureString(Mid(header, currentChar + 1), headfont, New SizeF(w, h), format, chars, line)
-        e.Graphics.DrawString(header.Substring(currentChar, chars), New Font("Courier New", 15, FontStyle.Bold), Brushes.Black, a, format)
+        e.Graphics.DrawString(header.Substring(currentChar, chars), New Font("Courier New", 13, FontStyle.Bold), Brushes.Black, a, format)
 
         'Draw Barcode
         e.Graphics.MeasureString(Mid(ID, currentChar + 1), barfont, New SizeF(w, h), format, chars, line)
-        e.Graphics.DrawString(ID.Substring(currentChar, chars), New Font("3 of 9 Barcode", 30, FontStyle.Regular), Brushes.Black, b, format)
+        e.Graphics.DrawString(ID.Substring(currentChar, chars), New Font("3 of 9 Barcode", 25, FontStyle.Regular), Brushes.Black, b, format)
 
         'Draw Info (Employee Details & Cuti Deteils)
-        Dim c As New Rectangle(0, 80, w, h)
+        Dim c As New Rectangle(15, 80, w, h)
         e.Graphics.MeasureString(Mid(text, currentChar + 1), textfont, New SizeF(w, h), format, chars, line)
-        e.Graphics.DrawString(text.Substring(currentChar, chars), New Font("Courier New", 10, FontStyle.Bold), Brushes.Black, c, format)
+        e.Graphics.DrawString(text.Substring(currentChar, chars), New Font("Courier New", 8, FontStyle.Bold), Brushes.Black, c, format)
 
         'Draw Signature Box
-        Dim sisi As Integer = 94
-        Dim r1 As New Rectangle(0, 220, sisi, sisi)
+        Dim sisi As Integer = 65
+        Dim r1 As New Rectangle(30, 195, sisi, sisi)
         e.Graphics.DrawRectangle(Pens.Black, r1)
-        Dim r2 As New Rectangle(0 + sisi, 220, sisi, sisi)
+        Dim r2 As New Rectangle(30 + sisi, 195, sisi, sisi)
         e.Graphics.DrawRectangle(Pens.Black, r2)
-        Dim r3 As New Rectangle(0 + (sisi * 2), 220, sisi, sisi)
+        Dim r3 As New Rectangle(30 + (sisi * 2), 195, sisi, sisi)
         e.Graphics.DrawRectangle(Pens.Black, r3)
 
         'Draw Date Box
-        Dim r4 As New Rectangle(0, 294, sisi, 20)
+        Dim r4 As New Rectangle(30, 245, sisi, 15)
         e.Graphics.DrawRectangle(Pens.Black, r4)
-        Dim r5 As New Rectangle(0 + sisi, 294, sisi, 20)
+        Dim r5 As New Rectangle(30 + sisi, 245, sisi, 15)
         e.Graphics.DrawRectangle(Pens.Black, r5)
-        Dim r6 As New Rectangle(0 + (sisi * 2), 294, sisi, 20)
+        Dim r6 As New Rectangle(30 + (sisi * 2), 245, sisi, 15)
         e.Graphics.DrawRectangle(Pens.Black, r6)
 
         currentChar = currentChar + chars

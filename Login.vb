@@ -14,6 +14,9 @@ Public Class Login
 
             'Check kpk is registered or not
             KPK = tbKPK.Text
+            If KPK.Length > 6 Then
+                KPK = KPK.Substring(0, KPK.Length - 1)
+            End If
             count = EmployeeTableAdapter.checkKPK(KPK)
             If count = 1 Then
 
@@ -38,6 +41,9 @@ Public Class Login
                 'Show menu panel
                 Movement.showMenu()
                 Label2.Text = "Selamat Datang, " & Employee.getName
+            Else
+                tbKPK.Clear()
+                tbKPK.Select()
             End If
         End If
     End Sub

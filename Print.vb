@@ -13,7 +13,7 @@
         ProgressBar1.Minimum = 0
         ProgressBar1.Value = 0
         'PrintDocument1.PrinterSettings.PrinterName = "EPSON TM-T88V Receipt"
-        PrintDocument1.PrinterSettings.PrinterName = "Microsoft XPS Document Writer"
+        'PrintDocument1.PrinterSettings.PrinterName = "Microsoft XPS Document Writer"
         PrintHeader()
 
         Dim printControl = New Printing.StandardPrintController

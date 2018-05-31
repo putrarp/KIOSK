@@ -15,6 +15,7 @@
         Login.cutikuPanel.Visible = False
         Login.riwayatCuti.Visible = False
         Login.seragamkuPanel.Visible = False
+        Login.tbKPK.Select()
     End Sub
 
     Public Sub showCutiku()

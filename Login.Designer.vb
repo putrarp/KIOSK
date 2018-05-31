@@ -112,8 +112,8 @@ Partial Class Login
         Me.Label20 = New System.Windows.Forms.Label()
         Me.opt2PanelPants = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel24 = New System.Windows.Forms.TableLayoutPanel()
-        Me.p2s = New System.Windows.Forms.Button()
-        Me.p2l = New System.Windows.Forms.Button()
+        Me.p2j = New System.Windows.Forms.Button()
+        Me.p2n = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel25 = New System.Windows.Forms.TableLayoutPanel()
@@ -154,8 +154,8 @@ Partial Class Login
         Me.Label17 = New System.Windows.Forms.Label()
         Me.opt1PanelPants = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
-        Me.p1s = New System.Windows.Forms.Button()
-        Me.p1l = New System.Windows.Forms.Button()
+        Me.p1j = New System.Windows.Forms.Button()
+        Me.p1n = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel18 = New System.Windows.Forms.TableLayoutPanel()
@@ -211,6 +211,9 @@ Partial Class Login
         Me.PersonelActionDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmailBindinSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmailTableAdapter = New KIOSK.EmployeeDataSetTableAdapters.emailTableAdapter()
+        Me.SeragamBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SeragamkuDataSet = New KIOSK.SeragamkuDataSet()
+        Me.SeragamTableAdapter = New KIOSK.SeragamkuDataSetTableAdapters.SeragamTableAdapter()
         CType(Me.Personel_ActionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -279,6 +282,8 @@ Partial Class Login
         CType(Me.PersonelActionDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonelActionDataSetBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmailBindinSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SeragamBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SeragamkuDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Personel_ActionDataSet
@@ -1235,7 +1240,7 @@ Partial Class Login
         Me.s2Short.Name = "s2Short"
         Me.s2Short.Size = New System.Drawing.Size(128, 112)
         Me.s2Short.TabIndex = 6
-        Me.s2Short.Text = "Button15"
+        Me.s2Short.Text = "Pendek"
         Me.s2Short.UseVisualStyleBackColor = False
         '
         's2Long
@@ -1247,7 +1252,7 @@ Partial Class Login
         Me.s2Long.Name = "s2Long"
         Me.s2Long.Size = New System.Drawing.Size(128, 112)
         Me.s2Long.TabIndex = 7
-        Me.s2Long.Text = "Button16"
+        Me.s2Long.Text = "Panjang"
         Me.s2Long.UseVisualStyleBackColor = False
         '
         'Label19
@@ -1288,8 +1293,8 @@ Partial Class Login
         Me.TableLayoutPanel24.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel24.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel24.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TableLayoutPanel24.Controls.Add(Me.p2s, 0, 3)
-        Me.TableLayoutPanel24.Controls.Add(Me.p2l, 1, 3)
+        Me.TableLayoutPanel24.Controls.Add(Me.p2j, 0, 3)
+        Me.TableLayoutPanel24.Controls.Add(Me.p2n, 1, 3)
         Me.TableLayoutPanel24.Controls.Add(Me.Label23, 0, 0)
         Me.TableLayoutPanel24.Controls.Add(Me.Label24, 0, 2)
         Me.TableLayoutPanel24.Controls.Add(Me.TableLayoutPanel25, 0, 1)
@@ -1309,29 +1314,29 @@ Partial Class Login
         Me.TableLayoutPanel24.Size = New System.Drawing.Size(809, 257)
         Me.TableLayoutPanel24.TabIndex = 2
         '
-        'p2s
+        'p2j
         '
-        Me.p2s.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.p2s.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.p2s.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p2s.Location = New System.Drawing.Point(3, 142)
-        Me.p2s.Name = "p2s"
-        Me.p2s.Size = New System.Drawing.Size(128, 112)
-        Me.p2s.TabIndex = 6
-        Me.p2s.Text = "Button9"
-        Me.p2s.UseVisualStyleBackColor = False
+        Me.p2j.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.p2j.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.p2j.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.p2j.Location = New System.Drawing.Point(3, 142)
+        Me.p2j.Name = "p2j"
+        Me.p2j.Size = New System.Drawing.Size(128, 112)
+        Me.p2j.TabIndex = 6
+        Me.p2j.Text = "Jeans"
+        Me.p2j.UseVisualStyleBackColor = False
         '
-        'p2l
+        'p2n
         '
-        Me.p2l.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.p2l.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.p2l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p2l.Location = New System.Drawing.Point(137, 142)
-        Me.p2l.Name = "p2l"
-        Me.p2l.Size = New System.Drawing.Size(128, 112)
-        Me.p2l.TabIndex = 7
-        Me.p2l.Text = "Button10"
-        Me.p2l.UseVisualStyleBackColor = False
+        Me.p2n.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.p2n.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.p2n.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.p2n.Location = New System.Drawing.Point(137, 142)
+        Me.p2n.Name = "p2n"
+        Me.p2n.Size = New System.Drawing.Size(128, 112)
+        Me.p2n.TabIndex = 7
+        Me.p2n.Text = "Non Jeans"
+        Me.p2n.UseVisualStyleBackColor = False
         '
         'Label23
         '
@@ -1380,7 +1385,7 @@ Partial Class Login
         Me.p226.Name = "p226"
         Me.p226.Size = New System.Drawing.Size(58, 48)
         Me.p226.TabIndex = 0
-        Me.p226.Text = "Button22"
+        Me.p226.Text = "26"
         Me.p226.UseVisualStyleBackColor = True
         '
         'p227
@@ -1392,7 +1397,7 @@ Partial Class Login
         Me.p227.Name = "p227"
         Me.p227.Size = New System.Drawing.Size(58, 48)
         Me.p227.TabIndex = 1
-        Me.p227.Text = "Button23"
+        Me.p227.Text = "27"
         Me.p227.UseVisualStyleBackColor = True
         '
         'p238
@@ -1404,7 +1409,7 @@ Partial Class Login
         Me.p238.Name = "p238"
         Me.p238.Size = New System.Drawing.Size(58, 49)
         Me.p238.TabIndex = 2
-        Me.p238.Text = "Button24"
+        Me.p238.Text = "38"
         Me.p238.UseVisualStyleBackColor = True
         '
         'p239
@@ -1416,7 +1421,7 @@ Partial Class Login
         Me.p239.Name = "p239"
         Me.p239.Size = New System.Drawing.Size(58, 49)
         Me.p239.TabIndex = 3
-        Me.p239.Text = "Button25"
+        Me.p239.Text = "39"
         Me.p239.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel26
@@ -1446,7 +1451,7 @@ Partial Class Login
         Me.p228.Name = "p228"
         Me.p228.Size = New System.Drawing.Size(58, 48)
         Me.p228.TabIndex = 0
-        Me.p228.Text = "Button26"
+        Me.p228.Text = "28"
         Me.p228.UseVisualStyleBackColor = True
         '
         'p229
@@ -1458,7 +1463,7 @@ Partial Class Login
         Me.p229.Name = "p229"
         Me.p229.Size = New System.Drawing.Size(58, 48)
         Me.p229.TabIndex = 1
-        Me.p229.Text = "Button27"
+        Me.p229.Text = "29"
         Me.p229.UseVisualStyleBackColor = True
         '
         'p240
@@ -1470,7 +1475,7 @@ Partial Class Login
         Me.p240.Name = "p240"
         Me.p240.Size = New System.Drawing.Size(58, 49)
         Me.p240.TabIndex = 2
-        Me.p240.Text = "Button28"
+        Me.p240.Text = "40"
         Me.p240.UseVisualStyleBackColor = True
         '
         'p241
@@ -1482,7 +1487,7 @@ Partial Class Login
         Me.p241.Name = "p241"
         Me.p241.Size = New System.Drawing.Size(58, 49)
         Me.p241.TabIndex = 3
-        Me.p241.Text = "Button29"
+        Me.p241.Text = "41"
         Me.p241.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel27
@@ -1511,7 +1516,7 @@ Partial Class Login
         Me.p230.Name = "p230"
         Me.p230.Size = New System.Drawing.Size(58, 48)
         Me.p230.TabIndex = 0
-        Me.p230.Text = "Button30"
+        Me.p230.Text = "30"
         Me.p230.UseVisualStyleBackColor = True
         '
         'p231
@@ -1523,7 +1528,7 @@ Partial Class Login
         Me.p231.Name = "p231"
         Me.p231.Size = New System.Drawing.Size(58, 48)
         Me.p231.TabIndex = 1
-        Me.p231.Text = "Button31"
+        Me.p231.Text = "31"
         Me.p231.UseVisualStyleBackColor = True
         '
         'p242
@@ -1535,7 +1540,7 @@ Partial Class Login
         Me.p242.Name = "p242"
         Me.p242.Size = New System.Drawing.Size(58, 49)
         Me.p242.TabIndex = 2
-        Me.p242.Text = "Button32"
+        Me.p242.Text = "42"
         Me.p242.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel28
@@ -1563,7 +1568,7 @@ Partial Class Login
         Me.p232.Name = "p232"
         Me.p232.Size = New System.Drawing.Size(58, 48)
         Me.p232.TabIndex = 0
-        Me.p232.Text = "Button33"
+        Me.p232.Text = "32"
         Me.p232.UseVisualStyleBackColor = True
         '
         'p233
@@ -1575,7 +1580,7 @@ Partial Class Login
         Me.p233.Name = "p233"
         Me.p233.Size = New System.Drawing.Size(58, 48)
         Me.p233.TabIndex = 1
-        Me.p233.Text = "Button34"
+        Me.p233.Text = "33"
         Me.p233.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel29
@@ -1603,7 +1608,7 @@ Partial Class Login
         Me.p234.Name = "p234"
         Me.p234.Size = New System.Drawing.Size(58, 48)
         Me.p234.TabIndex = 0
-        Me.p234.Text = "Button35"
+        Me.p234.Text = "34"
         Me.p234.UseVisualStyleBackColor = True
         '
         'p235
@@ -1615,7 +1620,7 @@ Partial Class Login
         Me.p235.Name = "p235"
         Me.p235.Size = New System.Drawing.Size(58, 48)
         Me.p235.TabIndex = 1
-        Me.p235.Text = "Button36"
+        Me.p235.Text = "35"
         Me.p235.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel30
@@ -1643,7 +1648,7 @@ Partial Class Login
         Me.p236.Name = "p236"
         Me.p236.Size = New System.Drawing.Size(60, 48)
         Me.p236.TabIndex = 0
-        Me.p236.Text = "Button37"
+        Me.p236.Text = "36"
         Me.p236.UseVisualStyleBackColor = True
         '
         'p237
@@ -1655,7 +1660,7 @@ Partial Class Login
         Me.p237.Name = "p237"
         Me.p237.Size = New System.Drawing.Size(61, 48)
         Me.p237.TabIndex = 1
-        Me.p237.Text = "Button38"
+        Me.p237.Text = "37"
         Me.p237.UseVisualStyleBackColor = True
         '
         'opt1Panel
@@ -1795,7 +1800,7 @@ Partial Class Login
         Me.s1Short.Name = "s1Short"
         Me.s1Short.Size = New System.Drawing.Size(128, 111)
         Me.s1Short.TabIndex = 6
-        Me.s1Short.Text = "Button9"
+        Me.s1Short.Text = "Pendek"
         Me.s1Short.UseVisualStyleBackColor = False
         '
         's1Long
@@ -1807,7 +1812,7 @@ Partial Class Login
         Me.s1Long.Name = "s1Long"
         Me.s1Long.Size = New System.Drawing.Size(128, 111)
         Me.s1Long.TabIndex = 7
-        Me.s1Long.Text = "Button10"
+        Me.s1Long.Text = "Panjang"
         Me.s1Long.UseVisualStyleBackColor = False
         '
         'Label15
@@ -1848,8 +1853,8 @@ Partial Class Login
         Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
         Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TableLayoutPanel17.Controls.Add(Me.p1s, 0, 3)
-        Me.TableLayoutPanel17.Controls.Add(Me.p1l, 1, 3)
+        Me.TableLayoutPanel17.Controls.Add(Me.p1j, 0, 3)
+        Me.TableLayoutPanel17.Controls.Add(Me.p1n, 1, 3)
         Me.TableLayoutPanel17.Controls.Add(Me.Label21, 0, 0)
         Me.TableLayoutPanel17.Controls.Add(Me.Label22, 0, 2)
         Me.TableLayoutPanel17.Controls.Add(Me.TableLayoutPanel18, 0, 1)
@@ -1869,29 +1874,29 @@ Partial Class Login
         Me.TableLayoutPanel17.Size = New System.Drawing.Size(809, 256)
         Me.TableLayoutPanel17.TabIndex = 1
         '
-        'p1s
+        'p1j
         '
-        Me.p1s.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.p1s.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.p1s.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p1s.Location = New System.Drawing.Point(3, 142)
-        Me.p1s.Name = "p1s"
-        Me.p1s.Size = New System.Drawing.Size(128, 111)
-        Me.p1s.TabIndex = 6
-        Me.p1s.Text = "Button9"
-        Me.p1s.UseVisualStyleBackColor = False
+        Me.p1j.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.p1j.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.p1j.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.p1j.Location = New System.Drawing.Point(3, 142)
+        Me.p1j.Name = "p1j"
+        Me.p1j.Size = New System.Drawing.Size(128, 111)
+        Me.p1j.TabIndex = 6
+        Me.p1j.Text = "Jeans"
+        Me.p1j.UseVisualStyleBackColor = False
         '
-        'p1l
+        'p1n
         '
-        Me.p1l.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.p1l.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.p1l.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.p1l.Location = New System.Drawing.Point(137, 142)
-        Me.p1l.Name = "p1l"
-        Me.p1l.Size = New System.Drawing.Size(128, 111)
-        Me.p1l.TabIndex = 7
-        Me.p1l.Text = "Button10"
-        Me.p1l.UseVisualStyleBackColor = False
+        Me.p1n.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.p1n.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.p1n.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.p1n.Location = New System.Drawing.Point(137, 142)
+        Me.p1n.Name = "p1n"
+        Me.p1n.Size = New System.Drawing.Size(128, 111)
+        Me.p1n.TabIndex = 7
+        Me.p1n.Text = "Non Jeans"
+        Me.p1n.UseVisualStyleBackColor = False
         '
         'Label21
         '
@@ -1940,7 +1945,7 @@ Partial Class Login
         Me.p126.Name = "p126"
         Me.p126.Size = New System.Drawing.Size(58, 48)
         Me.p126.TabIndex = 0
-        Me.p126.Text = "Button1"
+        Me.p126.Text = "26"
         Me.p126.UseVisualStyleBackColor = True
         '
         'p127
@@ -1952,7 +1957,7 @@ Partial Class Login
         Me.p127.Name = "p127"
         Me.p127.Size = New System.Drawing.Size(58, 48)
         Me.p127.TabIndex = 1
-        Me.p127.Text = "Button2"
+        Me.p127.Text = "27"
         Me.p127.UseVisualStyleBackColor = True
         '
         'p138
@@ -1964,7 +1969,7 @@ Partial Class Login
         Me.p138.Name = "p138"
         Me.p138.Size = New System.Drawing.Size(58, 49)
         Me.p138.TabIndex = 2
-        Me.p138.Text = "Button15"
+        Me.p138.Text = "38"
         Me.p138.UseVisualStyleBackColor = True
         '
         'p139
@@ -1976,7 +1981,7 @@ Partial Class Login
         Me.p139.Name = "p139"
         Me.p139.Size = New System.Drawing.Size(58, 49)
         Me.p139.TabIndex = 3
-        Me.p139.Text = "Button16"
+        Me.p139.Text = "39"
         Me.p139.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel19
@@ -2006,7 +2011,7 @@ Partial Class Login
         Me.p128.Name = "p128"
         Me.p128.Size = New System.Drawing.Size(58, 48)
         Me.p128.TabIndex = 0
-        Me.p128.Text = "Button3"
+        Me.p128.Text = "28"
         Me.p128.UseVisualStyleBackColor = True
         '
         'p129
@@ -2018,7 +2023,7 @@ Partial Class Login
         Me.p129.Name = "p129"
         Me.p129.Size = New System.Drawing.Size(58, 48)
         Me.p129.TabIndex = 1
-        Me.p129.Text = "Button4"
+        Me.p129.Text = "29"
         Me.p129.UseVisualStyleBackColor = True
         '
         'p140
@@ -2030,7 +2035,7 @@ Partial Class Login
         Me.p140.Name = "p140"
         Me.p140.Size = New System.Drawing.Size(58, 49)
         Me.p140.TabIndex = 2
-        Me.p140.Text = "Button17"
+        Me.p140.Text = "40"
         Me.p140.UseVisualStyleBackColor = True
         '
         'p141
@@ -2042,7 +2047,7 @@ Partial Class Login
         Me.p141.Name = "p141"
         Me.p141.Size = New System.Drawing.Size(58, 49)
         Me.p141.TabIndex = 3
-        Me.p141.Text = "Button18"
+        Me.p141.Text = "41"
         Me.p141.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel20
@@ -2071,7 +2076,7 @@ Partial Class Login
         Me.p130.Name = "p130"
         Me.p130.Size = New System.Drawing.Size(58, 48)
         Me.p130.TabIndex = 0
-        Me.p130.Text = "Button5"
+        Me.p130.Text = "30"
         Me.p130.UseVisualStyleBackColor = True
         '
         'p131
@@ -2083,7 +2088,7 @@ Partial Class Login
         Me.p131.Name = "p131"
         Me.p131.Size = New System.Drawing.Size(58, 48)
         Me.p131.TabIndex = 1
-        Me.p131.Text = "Button6"
+        Me.p131.Text = "31"
         Me.p131.UseVisualStyleBackColor = True
         '
         'p142
@@ -2095,7 +2100,7 @@ Partial Class Login
         Me.p142.Name = "p142"
         Me.p142.Size = New System.Drawing.Size(58, 49)
         Me.p142.TabIndex = 2
-        Me.p142.Text = "Button19"
+        Me.p142.Text = "42"
         Me.p142.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel21
@@ -2123,7 +2128,7 @@ Partial Class Login
         Me.p132.Name = "p132"
         Me.p132.Size = New System.Drawing.Size(58, 48)
         Me.p132.TabIndex = 0
-        Me.p132.Text = "Button9"
+        Me.p132.Text = "32"
         Me.p132.UseVisualStyleBackColor = True
         '
         'p133
@@ -2135,7 +2140,7 @@ Partial Class Login
         Me.p133.Name = "p133"
         Me.p133.Size = New System.Drawing.Size(58, 48)
         Me.p133.TabIndex = 1
-        Me.p133.Text = "Button10"
+        Me.p133.Text = "33"
         Me.p133.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel22
@@ -2163,7 +2168,7 @@ Partial Class Login
         Me.p134.Name = "p134"
         Me.p134.Size = New System.Drawing.Size(58, 48)
         Me.p134.TabIndex = 0
-        Me.p134.Text = "Button11"
+        Me.p134.Text = "34"
         Me.p134.UseVisualStyleBackColor = True
         '
         'p135
@@ -2175,7 +2180,7 @@ Partial Class Login
         Me.p135.Name = "p135"
         Me.p135.Size = New System.Drawing.Size(58, 48)
         Me.p135.TabIndex = 1
-        Me.p135.Text = "Button12"
+        Me.p135.Text = "35"
         Me.p135.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel23
@@ -2203,7 +2208,7 @@ Partial Class Login
         Me.p136.Name = "p136"
         Me.p136.Size = New System.Drawing.Size(60, 48)
         Me.p136.TabIndex = 0
-        Me.p136.Text = "Button13"
+        Me.p136.Text = "36"
         Me.p136.UseVisualStyleBackColor = True
         '
         'p137
@@ -2215,7 +2220,7 @@ Partial Class Login
         Me.p137.Name = "p137"
         Me.p137.Size = New System.Drawing.Size(61, 48)
         Me.p137.TabIndex = 1
-        Me.p137.Text = "Button14"
+        Me.p137.Text = "37"
         Me.p137.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel13
@@ -2545,6 +2550,20 @@ Partial Class Login
         '
         Me.EmailTableAdapter.ClearBeforeFill = True
         '
+        'SeragamBindingSource
+        '
+        Me.SeragamBindingSource.DataMember = "Seragam"
+        Me.SeragamBindingSource.DataSource = Me.SeragamkuDataSet
+        '
+        'SeragamkuDataSet
+        '
+        Me.SeragamkuDataSet.DataSetName = "SeragamkuDataSet"
+        Me.SeragamkuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SeragamTableAdapter
+        '
+        Me.SeragamTableAdapter.ClearBeforeFill = True
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2554,11 +2573,11 @@ Partial Class Login
         Me.ClientSize = New System.Drawing.Size(1276, 862)
         Me.ControlBox = False
         Me.Controls.Add(Me.seragamkuPanel)
-        Me.Controls.Add(Me.riwayatCuti)
         Me.Controls.Add(Me.loginPanel)
         Me.Controls.Add(Me.menuPanel)
         Me.Controls.Add(Me.cutikuPanel)
         Me.Controls.Add(Me.requestCutiPanel)
+        Me.Controls.Add(Me.riwayatCuti)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Login"
@@ -2643,6 +2662,8 @@ Partial Class Login
         CType(Me.PersonelActionDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonelActionDataSetBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmailBindinSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SeragamBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SeragamkuDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2775,8 +2796,8 @@ Partial Class Login
     Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Remarks As DataGridViewTextBoxColumn
     Friend WithEvents TableLayoutPanel17 As TableLayoutPanel
-    Friend WithEvents p1s As Button
-    Friend WithEvents p1l As Button
+    Friend WithEvents p1j As Button
+    Friend WithEvents p1n As Button
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents TableLayoutPanel18 As TableLayoutPanel
@@ -2803,8 +2824,8 @@ Partial Class Login
     Friend WithEvents p136 As Button
     Friend WithEvents p137 As Button
     Friend WithEvents TableLayoutPanel24 As TableLayoutPanel
-    Friend WithEvents p2s As Button
-    Friend WithEvents p2l As Button
+    Friend WithEvents p2j As Button
+    Friend WithEvents p2n As Button
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents TableLayoutPanel25 As TableLayoutPanel
@@ -2831,4 +2852,7 @@ Partial Class Login
     Friend WithEvents p236 As Button
     Friend WithEvents p237 As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents SeragamBindingSource As BindingSource
+    Friend WithEvents SeragamkuDataSet As SeragamkuDataSet
+    Friend WithEvents SeragamTableAdapter As SeragamkuDataSetTableAdapters.SeragamTableAdapter
 End Class

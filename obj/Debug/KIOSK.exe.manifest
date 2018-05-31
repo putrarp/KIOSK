@@ -43,24 +43,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KIOSK.exe" size="1355688">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KIOSK.exe" size="1381800">
       <assemblyIdentity name="KIOSK" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qVU++MJb9ADNrXCjA3e2h+zj9j8=</dsig:DigestValue>
+        <dsig:DigestValue>Uo9j1En5LqRxU+1Q03ga3lqSjxM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="KIOSK.exe.config" size="1931">
+  <file name="KIOSK.exe.config" size="2231">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>U/GENE0nezhJchLhHKLDLTIT9T4=</dsig:DigestValue>
+      <dsig:DigestValue>Sz4/mAd+Cjcrnwn3mw9vzg2Urac=</dsig:DigestValue>
     </hash>
   </file>
   <file name="online_shop_k1l_icon.ico" size="31295">

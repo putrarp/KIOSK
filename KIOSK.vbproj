@@ -14,9 +14,9 @@
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>W5HP3LJY\</PublishUrl>
+    <PublishUrl>\\apckrm06a\Public\NEW KIOS\APPROVAL\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
+    <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -27,7 +27,7 @@
     <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -162,6 +162,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SendMail.vb" />
+    <Compile Include="SeragamkuDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeragamkuDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -213,6 +218,17 @@
     </None>
     <None Include="Personel_ActionDataSet.xss">
       <DependentUpon>Personel_ActionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SeragamkuDataSet.xsc">
+      <DependentUpon>SeragamkuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SeragamkuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeragamkuDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SeragamkuDataSet.xss">
+      <DependentUpon>SeragamkuDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

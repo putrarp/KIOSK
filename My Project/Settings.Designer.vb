@@ -75,6 +75,17 @@ Namespace My
                 Return CType(Me("PersonelActionConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=""\\apckrm06a\LSCO\07.Team_Files\Putr"& _ 
+            "a\Personel Action\Seragamku.mdb""")>  _
+        Public ReadOnly Property SeragamkuConnectionString() As String
+            Get
+                Return CType(Me("SeragamkuConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

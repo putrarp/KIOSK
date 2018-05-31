@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="file:///C:/Users/pradanap/source/repos/KIOSK/KIOSK/W5HP3LJY/KIOSK.application" />
+    <deploymentProvider codebase="file://apckrm06a/Public/NEW%20KIOS/APPROVAL/KIOSK.application" />
   </deployment>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="KIOSK.exe.manifest" size="4904">
@@ -18,7 +18,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0UcVjoygtY7DyzZOdIPXXdpSZNk=</dsig:DigestValue>
+        <dsig:DigestValue>Qc8YEhx7sbd6NwLT4l1zHFYuAOc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -811,4 +811,23 @@
         Login.p242.BackColor = Color.FromArgb(255, 255, 128, 255)
     End Sub
 
+    Public Sub p1j()
+        Login.p1j.BackColor = Color.FromArgb(255, 255, 128, 255)
+        Login.p1n.BackColor = Color.FromArgb(255, 255, 192, 128)
+    End Sub
+
+    Public Sub p1n()
+        Login.p1j.BackColor = Color.FromArgb(255, 255, 192, 128)
+        Login.p1n.BackColor = Color.FromArgb(255, 255, 128, 255)
+    End Sub
+
+    Public Sub p2j()
+        Login.p2j.BackColor = Color.FromArgb(255, 255, 128, 255)
+        Login.p2n.BackColor = Color.FromArgb(255, 255, 255, 128)
+    End Sub
+
+    Public Sub p2n()
+        Login.p2j.BackColor = Color.FromArgb(255, 255, 255, 128)
+        Login.p2n.BackColor = Color.FromArgb(255, 255, 128, 255)
+    End Sub
 End Module

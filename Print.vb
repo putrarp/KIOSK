@@ -1,5 +1,5 @@
 ﻿Public Class Print
-    Dim ID, text, tipe, Nama, awal, akhir, section, kpk, header, head, disetujui As String
+    Dim ID, text, tipe, Nama, awal, akhir, section, kpk, header, head, disetujui, sisa As String
     Dim Employee As New Employee
     Dim Cuti As New Cuti
     Public Sub setObj(emp, cut)
@@ -13,7 +13,7 @@
         ProgressBar1.Minimum = 0
         ProgressBar1.Value = 0
         'PrintDocument1.PrinterSettings.PrinterName = "EPSON TM-T88V Receipt"
-        'PrintDocument1.PrinterSettings.PrinterName = "Microsoft XPS Document Writer"
+        PrintDocument1.PrinterSettings.PrinterName = "Microsoft XPS Document Writer"
         PrintHeader()
 
         Dim printControl = New Printing.StandardPrintController
@@ -78,7 +78,13 @@
 
         LineLen = akhir.Length
         Dim spcLen4 As New String(" "c, Math.Round((33 - LineLen) / 2))
-        text = text & spcLen4 & akhir & Environment.NewLine & "  " & Environment.NewLine
+        text = text & spcLen4 & akhir & Environment.NewLine
+
+        sisa = "SISA CUTI : " & Trim(Mid((Employee.getSaldoAkhir - Cuti.getTotalHari).ToString, 1, 10))
+
+        LineLen = sisa.Length
+        Dim spcLen9 As New String(" "c, Math.Round((33 - LineLen) / 2))
+        text = text & spcLen9 & sisa & Environment.NewLine & "  " & Environment.NewLine
 
         disetujui = "Disetujui oleh:"
         LineLen = disetujui.Length
@@ -124,19 +130,19 @@
 
         'Draw Signature Box
         Dim sisi As Integer = 65
-        Dim r1 As New Rectangle(30, 195, sisi, sisi)
+        Dim r1 As New Rectangle(30, 205, sisi, sisi)
         e.Graphics.DrawRectangle(Pens.Black, r1)
-        Dim r2 As New Rectangle(30 + sisi, 195, sisi, sisi)
+        Dim r2 As New Rectangle(30 + sisi, 205, sisi, sisi)
         e.Graphics.DrawRectangle(Pens.Black, r2)
-        Dim r3 As New Rectangle(30 + (sisi * 2), 195, sisi, sisi)
+        Dim r3 As New Rectangle(30 + (sisi * 2), 205, sisi, sisi)
         e.Graphics.DrawRectangle(Pens.Black, r3)
 
         'Draw Date Box
-        Dim r4 As New Rectangle(30, 245, sisi, 15)
+        Dim r4 As New Rectangle(30, 255, sisi, 15)
         e.Graphics.DrawRectangle(Pens.Black, r4)
-        Dim r5 As New Rectangle(30 + sisi, 245, sisi, 15)
+        Dim r5 As New Rectangle(30 + sisi, 255, sisi, 15)
         e.Graphics.DrawRectangle(Pens.Black, r5)
-        Dim r6 As New Rectangle(30 + (sisi * 2), 245, sisi, 15)
+        Dim r6 As New Rectangle(30 + (sisi * 2), 255, sisi, 15)
         e.Graphics.DrawRectangle(Pens.Black, r6)
 
         currentChar = currentChar + chars

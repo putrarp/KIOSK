@@ -3,8 +3,8 @@
 Public Class Login
     Dim Cuti As New Cuti
     Dim Employee As New Employee
-    Dim opt1, opt2, pSize, p1Type, p2Type As Integer
-    Dim sup(3), sname(3), sType, sSize As String
+    Dim opt1, opt2, pSize As Integer
+    Dim sup(3), sname(3), sType, sSize, p1Type, p2Type As String
 
     Private Sub tbKPK_KeyDown(sender As Object, e As KeyEventArgs) Handles tbKPK.KeyDown
         Dim count As Integer
@@ -32,7 +32,9 @@ Public Class Login
                                 PersonelActionTableAdapter.ApprovedCuti(KPK),
                                 PersonelActionTableAdapter.PendingCuti(KPK),
                                 PersonelActionTableAdapter.BonusCuti(KPK),
+                                PersonelActionTableAdapter.QueryNonAnnual(KPK),
                                 Trim(EmployeeBindingSource.Current("EMBIRT")))
+
                 'Show menu panel
                 Movement.showMenu()
                 Label2.Text = "Selamat Datang, " & Employee.getName
@@ -41,6 +43,8 @@ Public Class Login
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'SeragamkuDataSet.Seragam' table. You can move, or remove it, as needed.
+        Me.SeragamTableAdapter.Fill(Me.SeragamkuDataSet.Seragam)
         opt1 = 1
         opt2 = 1
 
@@ -129,7 +133,7 @@ Public Class Login
 
             'Check cuti balance is 0 or not
             ProgressBar1.Value = 60
-            If Employee.getSaldoAkhir - Cuti.getTotalHari >= 0 Then
+            If Employee.getSaldoAkhir - Cuti.getTotalHari >= 0 And Cuti.getTipeCuti <> 37 Then
                 Try
                     If Employee.getTipe = 1 Then
                         Dim remarks = InputBox("Is There Any Remarks?", "Any Remarks?")
@@ -177,14 +181,67 @@ Public Class Login
                 ProgressBar1.Value = 100
                 MsgBox("Request cuti telah di input")
                 'Show login panel
-                Movement.showLogin
+                Movement.showLogin()
+                ProgressBar1.Value = 0
+                tbKPK.Clear()
+                tbKPK.Select()
+            ElseIf Employee.getSaldoAkhir - Cuti.getTotalHari <= 0 And Cuti.getTipeCuti = 37 Then
+                Try
+                    If Employee.getTipe = 1 Then
+                        Dim remarks = InputBox("Is There Any Remarks?", "Any Remarks?")
+                        If remarks = "" Then
+                        Else
+                            Cuti.setRemarks(remarks)
+                        End If
+                    End If
+                    'Input cuti request to database
+                    PersonelActionTableAdapter.InputCuti(Cuti.getID,
+                                                             Cuti.getTanggalInput,
+                                                             Cuti.getTipeCuti,
+                                                             Employee.getKpk,
+                                                             Employee.getName,
+                                                             Employee.getDept,
+                                                             Employee.getSect,
+                                                             Cuti.getTglMulai,
+                                                             Cuti.getTglAkhir,
+                                                             Cuti.getTotalHari,
+                                                             Cuti.getNomorDarurat,
+                                                             Cuti.getRemarks)
+                    ProgressBar1.Value = 90
+                Catch
+                    'Error catcher if input is failed
+                    MsgBox("Request cuti telah gagal silahkan cek data dan coba kembali")
+                    ProgressBar1.Value = 0
+                    Exit Sub
+                End Try
+
+                If Employee.getTipe = 0 Then
+                    'passing employe and cuti object
+                    Print.setObj(Employee, Cuti)
+                    Print.Show()
+                ElseIf Employee.getTipe = 1 Then
+                    SendMail.setObj(Employee, Cuti)
+                    Findheir()
+                    EmailBindinSource.Filter = "ID = " & sup(0)
+                    Dim tos = EmailBindinSource.Current("email")
+                    Dim tosn = EmailBindinSource.Current("eName")
+                    EmailBindinSource.Filter = "ID = " & Employee.getKpk
+                    Dim cc = EmailBindinSource.Current("email")
+                    Dim ccn = EmailBindinSource.Current("eName")
+                    SendMail.sendMail(tos, tosn, cc, ccn)
+                End If
+                ProgressBar1.Value = 100
+                MsgBox("Request cuti telah di input")
+                'Show login panel
+                Movement.showLogin()
                 ProgressBar1.Value = 0
                 tbKPK.Clear()
                 tbKPK.Select()
             Else
                 'Give message that balance is not enough and show login panel
-                MsgBox("Sisa saldo cuti anda hanya " & Employee.getSaldoAkhir & " Hari")
+                MsgBox("Sisa saldo cuti anda tersisa " & Employee.getSaldoAkhir & " Hari, Anda bisa menggunakan cuti tanpa bayar jika saldo anda tersisa 0 hari")
                 Movement.showLogin()
+                tbKPK.Clear()
                 ProgressBar1.Value = 0
             End If
         End If
@@ -328,79 +385,170 @@ Public Class Login
 
     Private Sub sShort(sender As Object, e As EventArgs) Handles s1Short.Click, s2Short.Click
         Movement.sShort()
-        sType = "S"
+        sType = "Sh"
     End Sub
 
     Private Sub sLong(sender As Object, e As EventArgs) Handles s1Long.Click, s2Long.Click
         Movement.sLong()
+        sType = "Ln"
     End Sub
 
     Private Sub p26(sender As Object, e As EventArgs) Handles p126.Click, p226.Click
         Movement.p26()
+        pSize = 26
     End Sub
 
     Private Sub p27(sender As Object, e As EventArgs) Handles p127.Click, p227.Click
         Movement.p27()
+        pSize = 27
     End Sub
 
     Private Sub p28(sender As Object, e As EventArgs) Handles p128.Click, p228.Click
         Movement.p28()
+        pSize = 28
     End Sub
 
     Private Sub p29(sender As Object, e As EventArgs) Handles p129.Click, p229.Click
         Movement.p29()
+        pSize = 29
     End Sub
 
     Private Sub p30(sender As Object, e As EventArgs) Handles p130.Click, p230.Click
         Movement.p30()
+        pSize = 30
     End Sub
 
     Private Sub p31(sender As Object, e As EventArgs) Handles p131.Click, p231.Click
         Movement.p31()
+        pSize = 31
     End Sub
 
     Private Sub p32(sender As Object, e As EventArgs) Handles p132.Click, p232.Click
         Movement.p32()
+        pSize = 32
     End Sub
 
     Private Sub p33(sender As Object, e As EventArgs) Handles p133.Click, p233.Click
         Movement.p33()
+        pSize = 33
     End Sub
 
     Private Sub p34(sender As Object, e As EventArgs) Handles p134.Click, p234.Click
         Movement.p34()
+        pSize = 34
     End Sub
 
     Private Sub p35(sender As Object, e As EventArgs) Handles p135.Click, p235.Click
         Movement.p35()
+        pSize = 35
     End Sub
 
     Private Sub p36(sender As Object, e As EventArgs) Handles p136.Click, p236.Click
         Movement.p36()
+        pSize = 36
     End Sub
 
     Private Sub p37(sender As Object, e As EventArgs) Handles p137.Click, p237.Click
         Movement.p37()
+        pSize = 37
     End Sub
 
     Private Sub p38(sender As Object, e As EventArgs) Handles p138.Click, p238.Click
         Movement.p38()
+        pSize = 38
     End Sub
 
     Private Sub p39(sender As Object, e As EventArgs) Handles p139.Click, p239.Click
         Movement.p39()
+        pSize = 39
     End Sub
 
     Private Sub p40(sender As Object, e As EventArgs) Handles p140.Click, p240.Click
         Movement.p40()
+        pSize = 40
     End Sub
 
     Private Sub p41(sender As Object, e As EventArgs) Handles p141.Click, p241.Click
         Movement.p41()
+        pSize = 41
     End Sub
 
     Private Sub p42(sender As Object, e As EventArgs) Handles p142.Click, p242.Click
         Movement.p42()
+        pSize = 42
     End Sub
 
+    Private Sub p1j_Click(sender As Object, e As EventArgs) Handles p1j.Click
+        Movement.p1j()
+        p1Type = "j"
+    End Sub
+
+    Private Sub p1n_Click(sender As Object, e As EventArgs) Handles p1n.Click
+        Movement.p1n()
+        p1Type = "n"
+    End Sub
+
+    Private Sub p2j_Click(sender As Object, e As EventArgs) Handles p2j.Click
+        Movement.p2j()
+        p2Type = "j"
+    End Sub
+
+    Private Sub p2n_Click(sender As Object, e As EventArgs) Handles p2n.Click
+        Movement.p2n()
+        p2Type = "n"
+    End Sub
+
+    Private Sub FlowLayoutPanel1_Click(sender As Object, e As EventArgs) Handles FlowLayoutPanel1.Click
+        Dim cshirt_size, cpant_size As String
+        Dim nshortshirt, nlongshirt, npants, cpants_type As Integer
+        nshortshirt = 0
+        nlongshirt = 0
+        npants = 0
+        cpants_type = 0
+
+        If opt1 = 1 Then
+            cshirt_size = sSize
+            If sType = "Sh" Then
+                nshortshirt += 1
+            ElseIf sType = "Ln" Then
+                nlongshirt += 1
+            End If
+        ElseIf opt1 = 2 Then
+            cpant_size = pSize
+            If p1Type = "j" Then
+                npants += 1
+            ElseIf p1Type = "n" Then
+                cpants_type += 1
+            End If
+        End If
+
+        If opt2 = 1 Then
+            cshirt_size = sSize
+            If sType = "Sh" Then
+                nshortshirt += 1
+            ElseIf sType = "Ln" Then
+                nlongshirt += 1
+            End If
+        ElseIf opt2 = 2 Then
+            cpant_size = pSize
+            If p2Type = "j" Then
+                npants += 1
+            ElseIf p2Type = "n" Then
+                cpants_type += 1
+            End If
+        End If
+
+        Dim ans = MsgBox("APAKAH ANDA YAKIN UNTUK MEMESAN" & vbNewLine & vbNewLine &
+                         "UKURAN BAJU" & vbTab & vbTab & "= " & cshirt_size & vbNewLine &
+                         "UKURAN CELANA" & vbTab & vbTab & "= " & cpant_size & vbNewLine &
+                         "BAJU LENGAN PENDEK" & vbTab & "= " & nshortshirt & vbNewLine &
+                         "BAJU LENGAN PANJANG" & vbTab & "= " & nlongshirt & vbNewLine &
+                         "CELANA JEANS" & vbTab & vbTab & "= " & npants & vbNewLine &
+                         "CELANA NON JEANS" & vbTab & vbTab & "= " & cpants_type,
+                         MsgBoxStyle.YesNo,
+                         "KONFIRMASI")
+        If ans = 6 Then
+            SeragamTableAdapter.InsertSeragam(Employee.getKpk, Now().Date, cshirt_size, cpant_size, nshortshirt, nlongshirt, npants, cpants_type)
+        End If
+    End Sub
 End Class

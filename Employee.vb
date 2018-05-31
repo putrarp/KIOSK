@@ -3,7 +3,7 @@
     Dim lamaBekerja, jatahCuti, cutiTerpakai, cutiPending, bonusCuti, saldoAkhir, tipe As Decimal
     Dim tanggalJoin, awal, akhir As DateTime
 
-    Public Sub setEmp(kpk, name, dept, sect, sections, mJob, join, terpakai, pending, bonus, ultah)
+    Public Sub setEmp(kpk, name, dept, sect, sections, mJob, join, terpakai, pending, bonus, nonAnnual, ultah)
         emKpk = kpk
         emName = name
         emDept = dept
@@ -18,7 +18,7 @@
         bonusCuti = bonus
         awal = setAwal(ultah)
         akhir = setAkhir(ultah)
-        saldoAkhir = hitungSaldo(jatahCuti, cutiTerpakai, cutiPending, bonusCuti)
+        saldoAkhir = hitungSaldo(jatahCuti, cutiTerpakai, cutiPending, bonusCuti, nonAnnual)
     End Sub
 
     Private Function setTanggal(join)
@@ -69,8 +69,8 @@
         End If
     End Function
 
-    Private Function hitungSaldo(jatah, terpakai, pending, bonus)
-        Return (jatah - (terpakai + pending)) + bonus
+    Private Function hitungSaldo(jatah, terpakai, pending, bonus, nonAnnual)
+        Return (jatah - (terpakai + pending)) + bonus + nonAnnual
     End Function
 
     Private Function setTipe(mJob)
